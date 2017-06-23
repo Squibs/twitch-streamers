@@ -1,0 +1,1066 @@
+//One Online Example:   https://api.twitch.tv/kraken/streams?channel=trick2g,LIRIK,beyondthesummit2,starladder1&client_id=3blsvasj5g4dll5vzi16z9amnxtnhw 
+{
+    "_total": 1,
+    "streams": [
+        {
+            "_id": 25561357616,
+            "game": "DayZ",
+            "viewers": 33058,
+            "video_height": 900,
+            "average_fps": 60.0393700787,
+            "delay": 0,
+            "created_at": "2017-06-21T16:05:49Z",
+            "is_playlist": false,
+            "stream_type": "live",
+            "preview": {
+                "small": "https://static-cdn.jtvnw.net/previews-ttv/live_user_lirik-80x45.jpg",
+                "medium": "https://static-cdn.jtvnw.net/previews-ttv/live_user_lirik-320x180.jpg",
+                "large": "https://static-cdn.jtvnw.net/previews-ttv/live_user_lirik-640x360.jpg",
+                "template": "https://static-cdn.jtvnw.net/previews-ttv/live_user_lirik-{width}x{height}.jpg"
+            },
+            "channel": {
+                "mature": false,
+                "partner": true,
+                "status": "The Usual - Twitter: @LIRIK",
+                "broadcaster_language": "en",
+                "display_name": "LIRIK",
+                "game": "DayZ",
+                "language": "en",
+                "_id": 23161357,
+                "name": "lirik",
+                "created_at": "2011-06-27T18:34:45Z",
+                "updated_at": "2017-06-21T19:36:49Z",
+                "delay": null,
+                "logo": "https://static-cdn.jtvnw.net/jtv_user_pictures/lirik-profile_image-476e7a592cdfed74-300x300.png",
+                "banner": null,
+                "video_banner": "https://static-cdn.jtvnw.net/jtv_user_pictures/lirik-channel_offline_image-af3bc6ef396c76ae-1920x1080.png",
+                "background": null,
+                "profile_banner": "https://static-cdn.jtvnw.net/jtv_user_pictures/lirik-profile_banner-cd63be39a747b629-480.png",
+                "profile_banner_background_color": "#221f1f",
+                "url": "https://www.twitch.tv/lirik",
+                "views": 182242866,
+                "followers": 1695097,
+                "_links": {
+                    "self": "https://api.twitch.tv/kraken/channels/lirik",
+                    "follows": "https://api.twitch.tv/kraken/channels/lirik/follows",
+                    "commercial": "https://api.twitch.tv/kraken/channels/lirik/commercial",
+                    "stream_key": "https://api.twitch.tv/kraken/channels/lirik/stream_key",
+                    "chat": "https://api.twitch.tv/kraken/chat/lirik",
+                    "features": "https://api.twitch.tv/kraken/channels/lirik/features",
+                    "subscriptions": "https://api.twitch.tv/kraken/channels/lirik/subscriptions",
+                    "editors": "https://api.twitch.tv/kraken/channels/lirik/editors",
+                    "teams": "https://api.twitch.tv/kraken/channels/lirik/teams",
+                    "videos": "https://api.twitch.tv/kraken/channels/lirik/videos"
+                }
+            },
+            "_links": {
+                "self": "https://api.twitch.tv/kraken/streams/lirik"
+            }
+        }
+    ],
+    "_links": {
+        "self": "https://api.twitch.tv/kraken/streams?channel=trick2g%2CLIRIK%2Cbeyondthesummit2%2Cstarladder1\u0026limit=25\u0026stream_type=live",
+        "next": "https://api.twitch.tv/kraken/streams?channel=trick2g%2CLIRIK%2Cbeyondthesummit2%2Cstarladder1\u0026limit=25\u0026offset=25\u0026stream_type=live",
+        "featured": "https://api.twitch.tv/kraken/streams/featured",
+        "summary": "https://api.twitch.tv/kraken/streams/summary",
+        "followed": "https://api.twitch.tv/kraken/streams/followed"
+    }
+}
+// Two Online Example:  https://api.twitch.tv/kraken/streams?channel=LIRIK,DrDisRespectLIVE&client_id=3blsvasj5g4dll5vzi16z9amnxtnhw 
+{
+    "_total": 2,
+    "streams": [
+        {
+            "_id": 25561357616,
+            "game": "DayZ",
+            "viewers": 32894,
+            "video_height": 900,
+            "average_fps": 60.0393700787,
+            "delay": 0,
+            "created_at": "2017-06-21T16:05:49Z",
+            "is_playlist": false,
+            "stream_type": "live",
+            "preview": {
+                "small": "https://static-cdn.jtvnw.net/previews-ttv/live_user_lirik-80x45.jpg",
+                "medium": "https://static-cdn.jtvnw.net/previews-ttv/live_user_lirik-320x180.jpg",
+                "large": "https://static-cdn.jtvnw.net/previews-ttv/live_user_lirik-640x360.jpg",
+                "template": "https://static-cdn.jtvnw.net/previews-ttv/live_user_lirik-{width}x{height}.jpg"
+            },
+            "channel": {
+                "mature": false,
+                "partner": true,
+                "status": "The Usual - Twitter: @LIRIK",
+                "broadcaster_language": "en",
+                "display_name": "LIRIK",
+                "game": "DayZ",
+                "language": "en",
+                "_id": 23161357,
+                "name": "lirik",
+                "created_at": "2011-06-27T18:34:45Z",
+                "updated_at": "2017-06-21T19:36:49Z",
+                "delay": null,
+                "logo": "https://static-cdn.jtvnw.net/jtv_user_pictures/lirik-profile_image-476e7a592cdfed74-300x300.png",
+                "banner": null,
+                "video_banner": "https://static-cdn.jtvnw.net/jtv_user_pictures/lirik-channel_offline_image-af3bc6ef396c76ae-1920x1080.png",
+                "background": null,
+                "profile_banner": "https://static-cdn.jtvnw.net/jtv_user_pictures/lirik-profile_banner-cd63be39a747b629-480.png",
+                "profile_banner_background_color": "#221f1f",
+                "url": "https://www.twitch.tv/lirik",
+                "views": 182242866,
+                "followers": 1695104,
+                "_links": {
+                    "self": "https://api.twitch.tv/kraken/channels/lirik",
+                    "follows": "https://api.twitch.tv/kraken/channels/lirik/follows",
+                    "commercial": "https://api.twitch.tv/kraken/channels/lirik/commercial",
+                    "stream_key": "https://api.twitch.tv/kraken/channels/lirik/stream_key",
+                    "chat": "https://api.twitch.tv/kraken/chat/lirik",
+                    "features": "https://api.twitch.tv/kraken/channels/lirik/features",
+                    "subscriptions": "https://api.twitch.tv/kraken/channels/lirik/subscriptions",
+                    "editors": "https://api.twitch.tv/kraken/channels/lirik/editors",
+                    "teams": "https://api.twitch.tv/kraken/channels/lirik/teams",
+                    "videos": "https://api.twitch.tv/kraken/channels/lirik/videos"
+                }
+            },
+            "_links": {
+                "self": "https://api.twitch.tv/kraken/streams/lirik"
+            }
+        },
+        {
+            "_id": 25562260256,
+            "game": "PLAYERUNKNOWN'S BATTLEGROUNDS",
+            "viewers": 19344,
+            "video_height": 720,
+            "average_fps": 60,
+            "delay": 0,
+            "created_at": "2017-06-21T18:17:25Z",
+            "is_playlist": false,
+            "stream_type": "live",
+            "preview": {
+                "small": "https://static-cdn.jtvnw.net/previews-ttv/live_user_drdisrespectlive-80x45.jpg",
+                "medium": "https://static-cdn.jtvnw.net/previews-ttv/live_user_drdisrespectlive-320x180.jpg",
+                "large": "https://static-cdn.jtvnw.net/previews-ttv/live_user_drdisrespectlive-640x360.jpg",
+                "template": "https://static-cdn.jtvnw.net/previews-ttv/live_user_drdisrespectlive-{width}x{height}.jpg"
+            },
+            "channel": {
+                "mature": false,
+                "partner": true,
+                "status": "Hardcore Success Rate || @DrDisRespect",
+                "broadcaster_language": "en",
+                "display_name": "DrDisRespectLIVE",
+                "game": "PLAYERUNKNOWN'S BATTLEGROUNDS",
+                "language": "en",
+                "_id": 17337557,
+                "name": "drdisrespectlive",
+                "created_at": "2010-11-02T15:32:25Z",
+                "updated_at": "2017-06-21T19:36:07Z",
+                "delay": null,
+                "logo": "https://static-cdn.jtvnw.net/jtv_user_pictures/drdisrespectlive-profile_image-abc1fc67d2ea1ae1-300x300.png",
+                "banner": null,
+                "video_banner": "https://static-cdn.jtvnw.net/jtv_user_pictures/drdisrespectlive-channel_offline_image-a79e4923a8019a58-1920x1080.png",
+                "background": null,
+                "profile_banner": "https://static-cdn.jtvnw.net/jtv_user_pictures/drdisrespectlive-profile_banner-587fde2bcaa24a84-480.png",
+                "profile_banner_background_color": "",
+                "url": "https://www.twitch.tv/drdisrespectlive",
+                "views": 16569815,
+                "followers": 566077,
+                "_links": {
+                    "self": "https://api.twitch.tv/kraken/channels/drdisrespectlive",
+                    "follows": "https://api.twitch.tv/kraken/channels/drdisrespectlive/follows",
+                    "commercial": "https://api.twitch.tv/kraken/channels/drdisrespectlive/commercial",
+                    "stream_key": "https://api.twitch.tv/kraken/channels/drdisrespectlive/stream_key",
+                    "chat": "https://api.twitch.tv/kraken/chat/drdisrespectlive",
+                    "features": "https://api.twitch.tv/kraken/channels/drdisrespectlive/features",
+                    "subscriptions": "https://api.twitch.tv/kraken/channels/drdisrespectlive/subscriptions",
+                    "editors": "https://api.twitch.tv/kraken/channels/drdisrespectlive/editors",
+                    "teams": "https://api.twitch.tv/kraken/channels/drdisrespectlive/teams",
+                    "videos": "https://api.twitch.tv/kraken/channels/drdisrespectlive/videos"
+                }
+            },
+            "_links": {
+                "self": "https://api.twitch.tv/kraken/streams/drdisrespectlive"
+            }
+        }
+    ],
+    "_links": {
+        "self": "https://api.twitch.tv/kraken/streams?channel=LIRIK%2CDrDisRespectLIVE\u0026limit=25\u0026stream_type=live",
+        "next": "https://api.twitch.tv/kraken/streams?channel=LIRIK%2CDrDisRespectLIVE\u0026limit=25\u0026offset=25\u0026stream_type=live",
+        "featured": "https://api.twitch.tv/kraken/streams/featured",
+        "summary": "https://api.twitch.tv/kraken/streams/summary",
+        "followed": "https://api.twitch.tv/kraken/streams/followed"
+    }
+}
+//Two Online, One Offline Example:  https://api.twitch.tv/kraken/streams?channel=LIRIK,DrDisRespectLIVE,lethalfrag&client_id=3blsvasj5g4dll5vzi16z9amnxtnhw
+{
+    "_total": 2,
+    "streams": [
+        {
+            "_id": 25561357616,
+            "game": "DayZ",
+            "viewers": 33193,
+            "video_height": 900,
+            "average_fps": 60.0393700787,
+            "delay": 0,
+            "created_at": "2017-06-21T16:05:49Z",
+            "is_playlist": false,
+            "stream_type": "live",
+            "preview": {
+                "small": "https://static-cdn.jtvnw.net/previews-ttv/live_user_lirik-80x45.jpg",
+                "medium": "https://static-cdn.jtvnw.net/previews-ttv/live_user_lirik-320x180.jpg",
+                "large": "https://static-cdn.jtvnw.net/previews-ttv/live_user_lirik-640x360.jpg",
+                "template": "https://static-cdn.jtvnw.net/previews-ttv/live_user_lirik-{width}x{height}.jpg"
+            },
+            "channel": {
+                "mature": false,
+                "partner": true,
+                "status": "The Usual - Twitter: @LIRIK",
+                "broadcaster_language": "en",
+                "display_name": "LIRIK",
+                "game": "DayZ",
+                "language": "en",
+                "_id": 23161357,
+                "name": "lirik",
+                "created_at": "2011-06-27T18:34:45Z",
+                "updated_at": "2017-06-21T19:36:49Z",
+                "delay": null,
+                "logo": "https://static-cdn.jtvnw.net/jtv_user_pictures/lirik-profile_image-476e7a592cdfed74-300x300.png",
+                "banner": null,
+                "video_banner": "https://static-cdn.jtvnw.net/jtv_user_pictures/lirik-channel_offline_image-af3bc6ef396c76ae-1920x1080.png",
+                "background": null,
+                "profile_banner": "https://static-cdn.jtvnw.net/jtv_user_pictures/lirik-profile_banner-cd63be39a747b629-480.png",
+                "profile_banner_background_color": "#221f1f",
+                "url": "https://www.twitch.tv/lirik",
+                "views": 182242866,
+                "followers": 1695111,
+                "_links": {
+                    "self": "https://api.twitch.tv/kraken/channels/lirik",
+                    "follows": "https://api.twitch.tv/kraken/channels/lirik/follows",
+                    "commercial": "https://api.twitch.tv/kraken/channels/lirik/commercial",
+                    "stream_key": "https://api.twitch.tv/kraken/channels/lirik/stream_key",
+                    "chat": "https://api.twitch.tv/kraken/chat/lirik",
+                    "features": "https://api.twitch.tv/kraken/channels/lirik/features",
+                    "subscriptions": "https://api.twitch.tv/kraken/channels/lirik/subscriptions",
+                    "editors": "https://api.twitch.tv/kraken/channels/lirik/editors",
+                    "teams": "https://api.twitch.tv/kraken/channels/lirik/teams",
+                    "videos": "https://api.twitch.tv/kraken/channels/lirik/videos"
+                }
+            },
+            "_links": {
+                "self": "https://api.twitch.tv/kraken/streams/lirik"
+            }
+        },
+        {
+            "_id": 25562260256,
+            "game": "PLAYERUNKNOWN'S BATTLEGROUNDS",
+            "viewers": 19118,
+            "video_height": 720,
+            "average_fps": 60,
+            "delay": 0,
+            "created_at": "2017-06-21T18:17:25Z",
+            "is_playlist": false,
+            "stream_type": "live",
+            "preview": {
+                "small": "https://static-cdn.jtvnw.net/previews-ttv/live_user_drdisrespectlive-80x45.jpg",
+                "medium": "https://static-cdn.jtvnw.net/previews-ttv/live_user_drdisrespectlive-320x180.jpg",
+                "large": "https://static-cdn.jtvnw.net/previews-ttv/live_user_drdisrespectlive-640x360.jpg",
+                "template": "https://static-cdn.jtvnw.net/previews-ttv/live_user_drdisrespectlive-{width}x{height}.jpg"
+            },
+            "channel": {
+                "mature": false,
+                "partner": true,
+                "status": "Hardcore Success Rate || @DrDisRespect",
+                "broadcaster_language": "en",
+                "display_name": "DrDisRespectLIVE",
+                "game": "PLAYERUNKNOWN'S BATTLEGROUNDS",
+                "language": "en",
+                "_id": 17337557,
+                "name": "drdisrespectlive",
+                "created_at": "2010-11-02T15:32:25Z",
+                "updated_at": "2017-06-21T19:36:07Z",
+                "delay": null,
+                "logo": "https://static-cdn.jtvnw.net/jtv_user_pictures/drdisrespectlive-profile_image-abc1fc67d2ea1ae1-300x300.png",
+                "banner": null,
+                "video_banner": "https://static-cdn.jtvnw.net/jtv_user_pictures/drdisrespectlive-channel_offline_image-a79e4923a8019a58-1920x1080.png",
+                "background": null,
+                "profile_banner": "https://static-cdn.jtvnw.net/jtv_user_pictures/drdisrespectlive-profile_banner-587fde2bcaa24a84-480.png",
+                "profile_banner_background_color": "",
+                "url": "https://www.twitch.tv/drdisrespectlive",
+                "views": 16569815,
+                "followers": 566106,
+                "_links": {
+                    "self": "https://api.twitch.tv/kraken/channels/drdisrespectlive",
+                    "follows": "https://api.twitch.tv/kraken/channels/drdisrespectlive/follows",
+                    "commercial": "https://api.twitch.tv/kraken/channels/drdisrespectlive/commercial",
+                    "stream_key": "https://api.twitch.tv/kraken/channels/drdisrespectlive/stream_key",
+                    "chat": "https://api.twitch.tv/kraken/chat/drdisrespectlive",
+                    "features": "https://api.twitch.tv/kraken/channels/drdisrespectlive/features",
+                    "subscriptions": "https://api.twitch.tv/kraken/channels/drdisrespectlive/subscriptions",
+                    "editors": "https://api.twitch.tv/kraken/channels/drdisrespectlive/editors",
+                    "teams": "https://api.twitch.tv/kraken/channels/drdisrespectlive/teams",
+                    "videos": "https://api.twitch.tv/kraken/channels/drdisrespectlive/videos"
+                }
+            },
+            "_links": {
+                "self": "https://api.twitch.tv/kraken/streams/drdisrespectlive"
+            }
+        }
+    ],
+    "_links": {
+        "self": "https://api.twitch.tv/kraken/streams?channel=LIRIK%2CDrDisRespectLIVE%2Clethalfrag\u0026limit=25\u0026stream_type=live",
+        "next": "https://api.twitch.tv/kraken/streams?channel=LIRIK%2CDrDisRespectLIVE%2Clethalfrag\u0026limit=25\u0026offset=25\u0026stream_type=live",
+        "featured": "https://api.twitch.tv/kraken/streams/featured",
+        "summary": "https://api.twitch.tv/kraken/streams/summary",
+        "followed": "https://api.twitch.tv/kraken/streams/followed"
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// https://api.twitch.tv/kraken/users/squibsvids/follows/channels?client_id=3blsvasj5g4dll5vzi16z9amnxtnhw
+
+{
+    "_total": 17,
+    "_links": {
+        "self": "https://api.twitch.tv/kraken/users/squibsvids/follows/channels?direction=DESC\u0026limit=25\u0026sortby=created_at\u0026user=squibsvids",
+        "next": "https://api.twitch.tv/kraken/users/squibsvids/follows/channels?direction=DESC\u0026limit=25\u0026offset=25\u0026sortby=created_at\u0026user=squibsvids"
+    },
+    "follows": [
+        {
+            "created_at": "2017-04-20T03:27:21Z",
+            "_links": {
+                "self": "https://api.twitch.tv/kraken/users/squibsvids/follows/channels/drdisrespectlive"
+            },
+            "channel": {
+                "mature": false,
+                "status": " Jawline Maximized || @DrDisRespect",
+                "broadcaster_language": "en",
+                "display_name": "DrDisRespectLIVE",
+                "game": "PLAYERUNKNOWN'S BATTLEGROUNDS",
+                "language": "en",
+                "_id": 17337557,
+                "name": "drdisrespectlive",
+                "created_at": "2010-11-02T15:32:25Z",
+                "updated_at": "2017-06-23T01:04:55Z",
+                "partner": true,
+                "logo": "https://static-cdn.jtvnw.net/jtv_user_pictures/drdisrespectlive-profile_image-abc1fc67d2ea1ae1-300x300.png",
+                "video_banner": "https://static-cdn.jtvnw.net/jtv_user_pictures/drdisrespectlive-channel_offline_image-a79e4923a8019a58-1920x1080.png",
+                "profile_banner": "https://static-cdn.jtvnw.net/jtv_user_pictures/drdisrespectlive-profile_banner-587fde2bcaa24a84-480.png",
+                "profile_banner_background_color": null,
+                "url": "https://www.twitch.tv/drdisrespectlive",
+                "views": 17106826,
+                "followers": 574758,
+                "_links": {
+                    "self": "https://api.twitch.tv/kraken/channels/drdisrespectlive",
+                    "follows": "https://api.twitch.tv/kraken/channels/drdisrespectlive/follows",
+                    "commercial": "https://api.twitch.tv/kraken/channels/drdisrespectlive/commercial",
+                    "stream_key": "https://api.twitch.tv/kraken/channels/drdisrespectlive/stream_key",
+                    "chat": "https://api.twitch.tv/kraken/chat/drdisrespectlive",
+                    "features": "https://api.twitch.tv/kraken/channels/drdisrespectlive/features",
+                    "subscriptions": "https://api.twitch.tv/kraken/channels/drdisrespectlive/subscriptions",
+                    "editors": "https://api.twitch.tv/kraken/channels/drdisrespectlive/editors",
+                    "teams": "https://api.twitch.tv/kraken/channels/drdisrespectlive/teams",
+                    "videos": "https://api.twitch.tv/kraken/channels/drdisrespectlive/videos"
+                },
+                "delay": null,
+                "banner": null,
+                "background": null
+            },
+            "notifications": false
+        },
+        {
+            "created_at": "2017-04-19T05:36:59Z",
+            "_links": {
+                "self": "https://api.twitch.tv/kraken/users/squibsvids/follows/channels/moonmoon_ow"
+            },
+            "channel": {
+                "mature": true,
+                "status": "\u003cYou require a MOONMOON (TM) GOD LEVEL SUB (TM) to see this title.\u003e",
+                "broadcaster_language": "en",
+                "display_name": "MOONMOON_OW",
+                "game": "Overwatch",
+                "language": "en",
+                "_id": 121059319,
+                "name": "moonmoon_ow",
+                "created_at": "2016-04-06T04:12:40Z",
+                "updated_at": "2017-06-23T01:04:22Z",
+                "partner": true,
+                "logo": "https://static-cdn.jtvnw.net/jtv_user_pictures/3973e918fe7cc8c8-profile_image-300x300.png",
+                "video_banner": "https://static-cdn.jtvnw.net/jtv_user_pictures/moonmoon_ow-channel_offline_image-2b3302e20384eee8-1920x1080.png",
+                "profile_banner": "https://static-cdn.jtvnw.net/jtv_user_pictures/moonmoon_ow-profile_banner-13fbfa1ba07bcd8a-480.png",
+                "profile_banner_background_color": "#ffffff",
+                "url": "https://www.twitch.tv/moonmoon_ow",
+                "views": 18495089,
+                "followers": 420998,
+                "_links": {
+                    "self": "https://api.twitch.tv/kraken/channels/moonmoon_ow",
+                    "follows": "https://api.twitch.tv/kraken/channels/moonmoon_ow/follows",
+                    "commercial": "https://api.twitch.tv/kraken/channels/moonmoon_ow/commercial",
+                    "stream_key": "https://api.twitch.tv/kraken/channels/moonmoon_ow/stream_key",
+                    "chat": "https://api.twitch.tv/kraken/chat/moonmoon_ow",
+                    "features": "https://api.twitch.tv/kraken/channels/moonmoon_ow/features",
+                    "subscriptions": "https://api.twitch.tv/kraken/channels/moonmoon_ow/subscriptions",
+                    "editors": "https://api.twitch.tv/kraken/channels/moonmoon_ow/editors",
+                    "teams": "https://api.twitch.tv/kraken/channels/moonmoon_ow/teams",
+                    "videos": "https://api.twitch.tv/kraken/channels/moonmoon_ow/videos"
+                },
+                "delay": null,
+                "banner": null,
+                "background": null
+            },
+            "notifications": false
+        },
+        {
+            "created_at": "2017-04-16T00:07:08Z",
+            "_links": {
+                "self": "https://api.twitch.tv/kraken/users/squibsvids/follows/channels/summit1g"
+            },
+            "channel": {
+                "mature": true,
+                "status": "bdo again LUL - @summit1g",
+                "broadcaster_language": "en",
+                "display_name": "summit1g",
+                "game": "Black Desert Online",
+                "language": "en",
+                "_id": 26490481,
+                "name": "summit1g",
+                "created_at": "2011-12-01T06:33:31Z",
+                "updated_at": "2017-06-23T01:04:16Z",
+                "partner": true,
+                "logo": "https://static-cdn.jtvnw.net/jtv_user_pictures/summit1g-profile_image-87970af8826df799-300x300.png",
+                "video_banner": "https://static-cdn.jtvnw.net/jtv_user_pictures/summit1g-channel_offline_image-e2f9a1df9e695ec1-1920x1080.png",
+                "profile_banner": "https://static-cdn.jtvnw.net/jtv_user_pictures/summit1g-profile_banner-da83b29c4dede9e4-480.png",
+                "profile_banner_background_color": null,
+                "url": "https://www.twitch.tv/summit1g",
+                "views": 151095952,
+                "followers": 2053995,
+                "_links": {
+                    "self": "https://api.twitch.tv/kraken/channels/summit1g",
+                    "follows": "https://api.twitch.tv/kraken/channels/summit1g/follows",
+                    "commercial": "https://api.twitch.tv/kraken/channels/summit1g/commercial",
+                    "stream_key": "https://api.twitch.tv/kraken/channels/summit1g/stream_key",
+                    "chat": "https://api.twitch.tv/kraken/chat/summit1g",
+                    "features": "https://api.twitch.tv/kraken/channels/summit1g/features",
+                    "subscriptions": "https://api.twitch.tv/kraken/channels/summit1g/subscriptions",
+                    "editors": "https://api.twitch.tv/kraken/channels/summit1g/editors",
+                    "teams": "https://api.twitch.tv/kraken/channels/summit1g/teams",
+                    "videos": "https://api.twitch.tv/kraken/channels/summit1g/videos"
+                },
+                "delay": null,
+                "banner": null,
+                "background": null
+            },
+            "notifications": false
+        },
+        {
+            "created_at": "2017-03-23T02:29:48Z",
+            "_links": {
+                "self": "https://api.twitch.tv/kraken/users/squibsvids/follows/channels/theattack"
+            },
+            "channel": {
+                "mature": false,
+                "status": "Steebz plays with Subs on the Battlegrounds!!!!",
+                "broadcaster_language": "en",
+                "display_name": "TheAttack",
+                "game": "PLAYERUNKNOWN'S BATTLEGROUNDS",
+                "language": "en",
+                "_id": 41226075,
+                "name": "theattack",
+                "created_at": "2013-03-11T03:56:21Z",
+                "updated_at": "2017-06-23T01:04:57Z",
+                "partner": true,
+                "logo": "https://static-cdn.jtvnw.net/jtv_user_pictures/theattack-profile_image-07e2285da07ae010-300x300.png",
+                "video_banner": "https://static-cdn.jtvnw.net/jtv_user_pictures/fb8ed685c0708797-channel_offline_image-1920x1080.png",
+                "profile_banner": "https://static-cdn.jtvnw.net/jtv_user_pictures/theattack-profile_banner-afe6ac64bbfada61-480.png",
+                "profile_banner_background_color": "#00a7ca",
+                "url": "https://www.twitch.tv/theattack",
+                "views": 8432724,
+                "followers": 84000,
+                "_links": {
+                    "self": "https://api.twitch.tv/kraken/channels/theattack",
+                    "follows": "https://api.twitch.tv/kraken/channels/theattack/follows",
+                    "commercial": "https://api.twitch.tv/kraken/channels/theattack/commercial",
+                    "stream_key": "https://api.twitch.tv/kraken/channels/theattack/stream_key",
+                    "chat": "https://api.twitch.tv/kraken/chat/theattack",
+                    "features": "https://api.twitch.tv/kraken/channels/theattack/features",
+                    "subscriptions": "https://api.twitch.tv/kraken/channels/theattack/subscriptions",
+                    "editors": "https://api.twitch.tv/kraken/channels/theattack/editors",
+                    "teams": "https://api.twitch.tv/kraken/channels/theattack/teams",
+                    "videos": "https://api.twitch.tv/kraken/channels/theattack/videos"
+                },
+                "delay": null,
+                "banner": null,
+                "background": null
+            },
+            "notifications": false
+        },
+        {
+            "created_at": "2016-02-18T05:47:37Z",
+            "_links": {
+                "self": "https://api.twitch.tv/kraken/users/squibsvids/follows/channels/jummychu"
+            },
+            "channel": {
+                "mature": true,
+                "status": "voice is rip no mic - tryhard [start d3 76LP]",
+                "broadcaster_language": "en",
+                "display_name": "Jummychu",
+                "game": "League of Legends",
+                "language": "en",
+                "_id": 37727476,
+                "name": "jummychu",
+                "created_at": "2012-11-16T07:21:58Z",
+                "updated_at": "2017-06-23T01:04:59Z",
+                "partner": true,
+                "logo": "https://static-cdn.jtvnw.net/jtv_user_pictures/jummychu-profile_image-23cde31a6b4a0574-300x300.jpeg",
+                "video_banner": null,
+                "profile_banner": null,
+                "profile_banner_background_color": null,
+                "url": "https://www.twitch.tv/jummychu",
+                "views": 1399722,
+                "followers": 31134,
+                "_links": {
+                    "self": "https://api.twitch.tv/kraken/channels/jummychu",
+                    "follows": "https://api.twitch.tv/kraken/channels/jummychu/follows",
+                    "commercial": "https://api.twitch.tv/kraken/channels/jummychu/commercial",
+                    "stream_key": "https://api.twitch.tv/kraken/channels/jummychu/stream_key",
+                    "chat": "https://api.twitch.tv/kraken/chat/jummychu",
+                    "features": "https://api.twitch.tv/kraken/channels/jummychu/features",
+                    "subscriptions": "https://api.twitch.tv/kraken/channels/jummychu/subscriptions",
+                    "editors": "https://api.twitch.tv/kraken/channels/jummychu/editors",
+                    "teams": "https://api.twitch.tv/kraken/channels/jummychu/teams",
+                    "videos": "https://api.twitch.tv/kraken/channels/jummychu/videos"
+                },
+                "delay": null,
+                "banner": null,
+                "background": null
+            },
+            "notifications": false
+        },
+        {
+            "created_at": "2015-09-21T01:32:10Z",
+            "_links": {
+                "self": "https://api.twitch.tv/kraken/users/squibsvids/follows/channels/shroud"
+            },
+            "channel": {
+                "mature": true,
+                "status": "@ DreamHack Summer  | Follow https://twitter.com/c9shroud",
+                "broadcaster_language": "en",
+                "display_name": "shroud",
+                "game": "Counter-Strike: Global Offensive",
+                "language": "en",
+                "_id": 37402112,
+                "name": "shroud",
+                "created_at": "2012-11-03T15:50:32Z",
+                "updated_at": "2017-06-23T01:04:51Z",
+                "partner": true,
+                "logo": "https://static-cdn.jtvnw.net/jtv_user_pictures/shroud-profile_image-850e059aee3d6bfa-300x300.jpeg",
+                "video_banner": "https://static-cdn.jtvnw.net/jtv_user_pictures/01f5ca6e0e437209-channel_offline_image-1920x1080.png",
+                "profile_banner": null,
+                "profile_banner_background_color": null,
+                "url": "https://www.twitch.tv/shroud",
+                "views": 37166758,
+                "followers": 931743,
+                "_links": {
+                    "self": "https://api.twitch.tv/kraken/channels/shroud",
+                    "follows": "https://api.twitch.tv/kraken/channels/shroud/follows",
+                    "commercial": "https://api.twitch.tv/kraken/channels/shroud/commercial",
+                    "stream_key": "https://api.twitch.tv/kraken/channels/shroud/stream_key",
+                    "chat": "https://api.twitch.tv/kraken/chat/shroud",
+                    "features": "https://api.twitch.tv/kraken/channels/shroud/features",
+                    "subscriptions": "https://api.twitch.tv/kraken/channels/shroud/subscriptions",
+                    "editors": "https://api.twitch.tv/kraken/channels/shroud/editors",
+                    "teams": "https://api.twitch.tv/kraken/channels/shroud/teams",
+                    "videos": "https://api.twitch.tv/kraken/channels/shroud/videos"
+                },
+                "delay": null,
+                "banner": null,
+                "background": null
+            },
+            "notifications": false
+        },
+        {
+            "created_at": "2014-02-20T22:02:14Z",
+            "_links": {
+                "self": "https://api.twitch.tv/kraken/users/squibsvids/follows/channels/lirik"
+            },
+            "channel": {
+                "mature": false,
+                "status": "TBT [VODCAST] (not live) Thursday = Day off - Next Stream: Friday @ NOON EST / 5pm GMT ",
+                "broadcaster_language": "en",
+                "display_name": "LIRIK",
+                "game": "God of War III",
+                "language": "en",
+                "_id": 23161357,
+                "name": "lirik",
+                "created_at": "2011-06-27T18:34:45Z",
+                "updated_at": "2017-06-23T01:04:48Z",
+                "partner": true,
+                "logo": "https://static-cdn.jtvnw.net/jtv_user_pictures/lirik-profile_image-476e7a592cdfed74-300x300.png",
+                "video_banner": "https://static-cdn.jtvnw.net/jtv_user_pictures/lirik-channel_offline_image-af3bc6ef396c76ae-1920x1080.png",
+                "profile_banner": "https://static-cdn.jtvnw.net/jtv_user_pictures/lirik-profile_banner-cd63be39a747b629-480.png",
+                "profile_banner_background_color": "#221f1f",
+                "url": "https://www.twitch.tv/lirik",
+                "views": 182521823,
+                "followers": 1695640,
+                "_links": {
+                    "self": "https://api.twitch.tv/kraken/channels/lirik",
+                    "follows": "https://api.twitch.tv/kraken/channels/lirik/follows",
+                    "commercial": "https://api.twitch.tv/kraken/channels/lirik/commercial",
+                    "stream_key": "https://api.twitch.tv/kraken/channels/lirik/stream_key",
+                    "chat": "https://api.twitch.tv/kraken/chat/lirik",
+                    "features": "https://api.twitch.tv/kraken/channels/lirik/features",
+                    "subscriptions": "https://api.twitch.tv/kraken/channels/lirik/subscriptions",
+                    "editors": "https://api.twitch.tv/kraken/channels/lirik/editors",
+                    "teams": "https://api.twitch.tv/kraken/channels/lirik/teams",
+                    "videos": "https://api.twitch.tv/kraken/channels/lirik/videos"
+                },
+                "delay": null,
+                "banner": null,
+                "background": null
+            },
+            "notifications": true
+        },
+        {
+            "created_at": "2014-01-16T05:25:27Z",
+            "_links": {
+                "self": "https://api.twitch.tv/kraken/users/squibsvids/follows/channels/samus37"
+            },
+            "channel": {
+                "mature": false,
+                "status": "Angry fat guy",
+                "broadcaster_language": null,
+                "display_name": "Samus37",
+                "game": null,
+                "language": "en",
+                "_id": 24401137,
+                "name": "samus37",
+                "created_at": "2011-08-27T19:07:26Z",
+                "updated_at": "2017-05-30T00:08:16Z",
+                "partner": false,
+                "logo": "https://static-cdn.jtvnw.net/jtv_user_pictures/samus37-profile_image-869f3714b0305af6-300x300.png",
+                "video_banner": null,
+                "profile_banner": "https://static-cdn.jtvnw.net/jtv_user_pictures/samus37-profile_banner-7c43fcee45da226c-480.jpeg",
+                "profile_banner_background_color": null,
+                "url": "https://www.twitch.tv/samus37",
+                "views": 4,
+                "followers": 2,
+                "_links": {
+                    "self": "https://api.twitch.tv/kraken/channels/samus37",
+                    "follows": "https://api.twitch.tv/kraken/channels/samus37/follows",
+                    "commercial": "https://api.twitch.tv/kraken/channels/samus37/commercial",
+                    "stream_key": "https://api.twitch.tv/kraken/channels/samus37/stream_key",
+                    "chat": "https://api.twitch.tv/kraken/chat/samus37",
+                    "features": "https://api.twitch.tv/kraken/channels/samus37/features",
+                    "subscriptions": "https://api.twitch.tv/kraken/channels/samus37/subscriptions",
+                    "editors": "https://api.twitch.tv/kraken/channels/samus37/editors",
+                    "teams": "https://api.twitch.tv/kraken/channels/samus37/teams",
+                    "videos": "https://api.twitch.tv/kraken/channels/samus37/videos"
+                },
+                "delay": null,
+                "banner": null,
+                "background": null
+            },
+            "notifications": true
+        },
+        {
+            "created_at": "2013-06-28T21:46:48Z",
+            "_links": {
+                "self": "https://api.twitch.tv/kraken/users/squibsvids/follows/channels/sips_"
+            },
+            "channel": {
+                "mature": false,
+                "status": "continuing the swe campaign",
+                "broadcaster_language": "en",
+                "display_name": "sips_",
+                "game": "Crusader Kings II",
+                "language": "en",
+                "_id": 26538483,
+                "name": "sips_",
+                "created_at": "2011-12-03T19:45:20Z",
+                "updated_at": "2017-06-23T01:04:48Z",
+                "partner": true,
+                "logo": "https://static-cdn.jtvnw.net/jtv_user_pictures/sips_-profile_image-39d9ee48f24ea155-300x300.png",
+                "video_banner": "https://static-cdn.jtvnw.net/jtv_user_pictures/sips_-channel_offline_image-b22beb77aab494e4-1920x1080.png",
+                "profile_banner": "https://static-cdn.jtvnw.net/jtv_user_pictures/sips_-profile_banner-795daf9491f48232-480.png",
+                "profile_banner_background_color": "#000000",
+                "url": "https://www.twitch.tv/sips_",
+                "views": 4544161,
+                "followers": 221665,
+                "_links": {
+                    "self": "https://api.twitch.tv/kraken/channels/sips_",
+                    "follows": "https://api.twitch.tv/kraken/channels/sips_/follows",
+                    "commercial": "https://api.twitch.tv/kraken/channels/sips_/commercial",
+                    "stream_key": "https://api.twitch.tv/kraken/channels/sips_/stream_key",
+                    "chat": "https://api.twitch.tv/kraken/chat/sips_",
+                    "features": "https://api.twitch.tv/kraken/channels/sips_/features",
+                    "subscriptions": "https://api.twitch.tv/kraken/channels/sips_/subscriptions",
+                    "editors": "https://api.twitch.tv/kraken/channels/sips_/editors",
+                    "teams": "https://api.twitch.tv/kraken/channels/sips_/teams",
+                    "videos": "https://api.twitch.tv/kraken/channels/sips_/videos"
+                },
+                "delay": null,
+                "banner": null,
+                "background": null
+            },
+            "notifications": true
+        },
+        {
+            "created_at": "2013-02-14T22:06:38Z",
+            "_links": {
+                "self": "https://api.twitch.tv/kraken/users/squibsvids/follows/channels/riotgames"
+            },
+            "channel": {
+                "mature": false,
+                "status": "College Championship Final: University of Toronto vs. Maryville University",
+                "broadcaster_language": "en",
+                "display_name": "Riot Games",
+                "game": "League of Legends",
+                "language": "en",
+                "_id": 36029255,
+                "name": "riotgames",
+                "created_at": "2012-09-08T06:53:10Z",
+                "updated_at": "2017-06-23T01:04:23Z",
+                "partner": true,
+                "logo": "https://static-cdn.jtvnw.net/jtv_user_pictures/riotgames-profile_image-4be3ad99629ac9ba-300x300.jpeg",
+                "video_banner": "https://static-cdn.jtvnw.net/jtv_user_pictures/ff9f009cd5f0d39e-channel_offline_image-1920x1080.jpeg",
+                "profile_banner": "https://static-cdn.jtvnw.net/jtv_user_pictures/3e0ec9b3d753f064-profile_banner-480.jpeg",
+                "profile_banner_background_color": null,
+                "url": "https://www.twitch.tv/riotgames",
+                "views": 903538894,
+                "followers": 2398758,
+                "_links": {
+                    "self": "https://api.twitch.tv/kraken/channels/riotgames",
+                    "follows": "https://api.twitch.tv/kraken/channels/riotgames/follows",
+                    "commercial": "https://api.twitch.tv/kraken/channels/riotgames/commercial",
+                    "stream_key": "https://api.twitch.tv/kraken/channels/riotgames/stream_key",
+                    "chat": "https://api.twitch.tv/kraken/chat/riotgames",
+                    "features": "https://api.twitch.tv/kraken/channels/riotgames/features",
+                    "subscriptions": "https://api.twitch.tv/kraken/channels/riotgames/subscriptions",
+                    "editors": "https://api.twitch.tv/kraken/channels/riotgames/editors",
+                    "teams": "https://api.twitch.tv/kraken/channels/riotgames/teams",
+                    "videos": "https://api.twitch.tv/kraken/channels/riotgames/videos"
+                },
+                "delay": null,
+                "banner": null,
+                "background": null
+            },
+            "notifications": true
+        },
+        {
+            "created_at": "2013-01-29T04:13:26Z",
+            "_links": {
+                "self": "https://api.twitch.tv/kraken/users/squibsvids/follows/channels/trihex"
+            },
+            "channel": {
+                "mature": true,
+                "status": "NEWS ABOUT NEW EMOTES (After Mario Maker, before YugiOh!) ",
+                "broadcaster_language": "en",
+                "display_name": "trihex",
+                "game": "Super Mario Maker",
+                "language": "en",
+                "_id": 22025290,
+                "name": "trihex",
+                "created_at": "2011-04-27T06:28:18Z",
+                "updated_at": "2017-06-23T01:04:24Z",
+                "partner": true,
+                "logo": "https://static-cdn.jtvnw.net/jtv_user_pictures/trihex-profile_image-3500a1fa02941578-300x300.jpeg",
+                "video_banner": "https://static-cdn.jtvnw.net/jtv_user_pictures/trihex-channel_offline_image-13871b2abd0c3d37-1920x1080.png",
+                "profile_banner": "https://static-cdn.jtvnw.net/jtv_user_pictures/trihex-profile_banner-5c2382b73c4629b9-480.png",
+                "profile_banner_background_color": null,
+                "url": "https://www.twitch.tv/trihex",
+                "views": 11718589,
+                "followers": 218835,
+                "_links": {
+                    "self": "https://api.twitch.tv/kraken/channels/trihex",
+                    "follows": "https://api.twitch.tv/kraken/channels/trihex/follows",
+                    "commercial": "https://api.twitch.tv/kraken/channels/trihex/commercial",
+                    "stream_key": "https://api.twitch.tv/kraken/channels/trihex/stream_key",
+                    "chat": "https://api.twitch.tv/kraken/chat/trihex",
+                    "features": "https://api.twitch.tv/kraken/channels/trihex/features",
+                    "subscriptions": "https://api.twitch.tv/kraken/channels/trihex/subscriptions",
+                    "editors": "https://api.twitch.tv/kraken/channels/trihex/editors",
+                    "teams": "https://api.twitch.tv/kraken/channels/trihex/teams",
+                    "videos": "https://api.twitch.tv/kraken/channels/trihex/videos"
+                },
+                "delay": null,
+                "banner": null,
+                "background": null
+            },
+            "notifications": true
+        },
+        {
+            "created_at": "2013-01-06T13:59:10Z",
+            "_links": {
+                "self": "https://api.twitch.tv/kraken/users/squibsvids/follows/channels/lethalfrag"
+            },
+            "channel": {
+                "mature": true,
+                "status": "(6/15) Days of JuneMas! - Relaxation \u0026 Learning - All Characters/Bosses - Show #1614",
+                "broadcaster_language": "en",
+                "display_name": "Lethalfrag",
+                "game": "Darkest Dungeon",
+                "language": "en",
+                "_id": 23460970,
+                "name": "lethalfrag",
+                "created_at": "2011-07-15T07:53:58Z",
+                "updated_at": "2017-06-23T01:02:32Z",
+                "partner": true,
+                "logo": "https://static-cdn.jtvnw.net/jtv_user_pictures/lethalfrag-profile_image-050adf252718823b-300x300.png",
+                "video_banner": "https://static-cdn.jtvnw.net/jtv_user_pictures/lethalfrag-channel_offline_image-343c5606041811ff-1920x1080.jpeg",
+                "profile_banner": "https://static-cdn.jtvnw.net/jtv_user_pictures/lethalfrag-profile_banner-e1974b435c3b1654-480.png",
+                "profile_banner_background_color": null,
+                "url": "https://www.twitch.tv/lethalfrag",
+                "views": 46464875,
+                "followers": 239557,
+                "_links": {
+                    "self": "https://api.twitch.tv/kraken/channels/lethalfrag",
+                    "follows": "https://api.twitch.tv/kraken/channels/lethalfrag/follows",
+                    "commercial": "https://api.twitch.tv/kraken/channels/lethalfrag/commercial",
+                    "stream_key": "https://api.twitch.tv/kraken/channels/lethalfrag/stream_key",
+                    "chat": "https://api.twitch.tv/kraken/chat/lethalfrag",
+                    "features": "https://api.twitch.tv/kraken/channels/lethalfrag/features",
+                    "subscriptions": "https://api.twitch.tv/kraken/channels/lethalfrag/subscriptions",
+                    "editors": "https://api.twitch.tv/kraken/channels/lethalfrag/editors",
+                    "teams": "https://api.twitch.tv/kraken/channels/lethalfrag/teams",
+                    "videos": "https://api.twitch.tv/kraken/channels/lethalfrag/videos"
+                },
+                "delay": null,
+                "banner": null,
+                "background": null
+            },
+            "notifications": true
+        },
+        {
+            "created_at": "2012-06-07T20:25:50Z",
+            "_links": {
+                "self": "https://api.twitch.tv/kraken/users/squibsvids/follows/channels/nl_kripp"
+            },
+            "channel": {
+                "mature": false,
+                "status": "Back@11pm EDT / 5am CEST !twitchprime (âœ¿â˜¯â€¿â˜¯âœ¿)(âœ¿â˜¯â€¿â˜¯âœ¿)",
+                "broadcaster_language": "en",
+                "display_name": "nl_Kripp",
+                "game": "Hearthstone",
+                "language": "en",
+                "_id": 29795919,
+                "name": "nl_kripp",
+                "created_at": "2012-04-15T02:25:31Z",
+                "updated_at": "2017-06-23T01:04:53Z",
+                "partner": true,
+                "logo": "https://static-cdn.jtvnw.net/jtv_user_pictures/nl_kripp-profile_image-294722d79072f28f-300x300.png",
+                "video_banner": "https://static-cdn.jtvnw.net/jtv_user_pictures/nl_kripp-channel_offline_image-b4f28953b2190755-1920x1080.png",
+                "profile_banner": "https://static-cdn.jtvnw.net/jtv_user_pictures/nl_kripp-profile_banner-2781fb5fc1393c89-480.png",
+                "profile_banner_background_color": null,
+                "url": "https://www.twitch.tv/nl_kripp",
+                "views": 169869991,
+                "followers": 1007272,
+                "_links": {
+                    "self": "https://api.twitch.tv/kraken/channels/nl_kripp",
+                    "follows": "https://api.twitch.tv/kraken/channels/nl_kripp/follows",
+                    "commercial": "https://api.twitch.tv/kraken/channels/nl_kripp/commercial",
+                    "stream_key": "https://api.twitch.tv/kraken/channels/nl_kripp/stream_key",
+                    "chat": "https://api.twitch.tv/kraken/chat/nl_kripp",
+                    "features": "https://api.twitch.tv/kraken/channels/nl_kripp/features",
+                    "subscriptions": "https://api.twitch.tv/kraken/channels/nl_kripp/subscriptions",
+                    "editors": "https://api.twitch.tv/kraken/channels/nl_kripp/editors",
+                    "teams": "https://api.twitch.tv/kraken/channels/nl_kripp/teams",
+                    "videos": "https://api.twitch.tv/kraken/channels/nl_kripp/videos"
+                },
+                "delay": null,
+                "banner": null,
+                "background": null
+            },
+            "notifications": true
+        },
+        {
+            "created_at": "2012-02-29T16:38:52Z",
+            "_links": {
+                "self": "https://api.twitch.tv/kraken/users/squibsvids/follows/channels/day9tv"
+            },
+            "channel": {
+                "mature": false,
+                "status": "Dota ALL DAY - The Slow Trot to 4k",
+                "broadcaster_language": "en",
+                "display_name": "Day9tv",
+                "game": "Dota 2",
+                "language": "en",
+                "_id": 18587270,
+                "name": "day9tv",
+                "created_at": "2010-12-09T05:50:55Z",
+                "updated_at": "2017-06-23T01:04:41Z",
+                "partner": true,
+                "logo": "https://static-cdn.jtvnw.net/jtv_user_pictures/day9tv-profile_image-2226c4b27aaf487a-300x300.png",
+                "video_banner": "https://static-cdn.jtvnw.net/jtv_user_pictures/day9tv-channel_offline_image-56ca9b8a5b0fd49f-1920x1080.jpeg",
+                "profile_banner": "https://static-cdn.jtvnw.net/jtv_user_pictures/day9tv-profile_banner-40f458e67491303f-480.jpeg",
+                "profile_banner_background_color": null,
+                "url": "https://www.twitch.tv/day9tv",
+                "views": 74296542,
+                "followers": 352767,
+                "_links": {
+                    "self": "https://api.twitch.tv/kraken/channels/day9tv",
+                    "follows": "https://api.twitch.tv/kraken/channels/day9tv/follows",
+                    "commercial": "https://api.twitch.tv/kraken/channels/day9tv/commercial",
+                    "stream_key": "https://api.twitch.tv/kraken/channels/day9tv/stream_key",
+                    "chat": "https://api.twitch.tv/kraken/chat/day9tv",
+                    "features": "https://api.twitch.tv/kraken/channels/day9tv/features",
+                    "subscriptions": "https://api.twitch.tv/kraken/channels/day9tv/subscriptions",
+                    "editors": "https://api.twitch.tv/kraken/channels/day9tv/editors",
+                    "teams": "https://api.twitch.tv/kraken/channels/day9tv/teams",
+                    "videos": "https://api.twitch.tv/kraken/channels/day9tv/videos"
+                },
+                "delay": null,
+                "banner": null,
+                "background": null
+            },
+            "notifications": true
+        },
+        {
+            "created_at": "2011-12-04T00:47:18Z",
+            "_links": {
+                "self": "https://api.twitch.tv/kraken/users/squibsvids/follows/channels/lagtvmaximusblack"
+            },
+            "channel": {
+                "mature": true,
+                "status": "Is This 2012!? SC2 Ladder! With MaximusBlack \u0026 The Fellowship Of The Bouses",
+                "broadcaster_language": "en",
+                "display_name": "LAGTVMaximusBlack",
+                "game": "StarCraft II",
+                "language": "en",
+                "_id": 23945610,
+                "name": "lagtvmaximusblack",
+                "created_at": "2011-08-08T21:03:44Z",
+                "updated_at": "2017-06-23T01:04:54Z",
+                "partner": true,
+                "logo": "https://static-cdn.jtvnw.net/jtv_user_pictures/lagtvmaximusblack-profile_image-4e42f86a50aaa0ef-300x300.png",
+                "video_banner": "https://static-cdn.jtvnw.net/jtv_user_pictures/lagtvmaximusblack-channel_offline_image-98764b72b7f0b661-1920x1080.png",
+                "profile_banner": null,
+                "profile_banner_background_color": null,
+                "url": "https://www.twitch.tv/lagtvmaximusblack",
+                "views": 25072319,
+                "followers": 204310,
+                "_links": {
+                    "self": "https://api.twitch.tv/kraken/channels/lagtvmaximusblack",
+                    "follows": "https://api.twitch.tv/kraken/channels/lagtvmaximusblack/follows",
+                    "commercial": "https://api.twitch.tv/kraken/channels/lagtvmaximusblack/commercial",
+                    "stream_key": "https://api.twitch.tv/kraken/channels/lagtvmaximusblack/stream_key",
+                    "chat": "https://api.twitch.tv/kraken/chat/lagtvmaximusblack",
+                    "features": "https://api.twitch.tv/kraken/channels/lagtvmaximusblack/features",
+                    "subscriptions": "https://api.twitch.tv/kraken/channels/lagtvmaximusblack/subscriptions",
+                    "editors": "https://api.twitch.tv/kraken/channels/lagtvmaximusblack/editors",
+                    "teams": "https://api.twitch.tv/kraken/channels/lagtvmaximusblack/teams",
+                    "videos": "https://api.twitch.tv/kraken/channels/lagtvmaximusblack/videos"
+                },
+                "delay": null,
+                "banner": null,
+                "background": null
+            },
+            "notifications": true
+        },
+        {
+            "created_at": "2011-07-08T11:33:30Z",
+            "_links": {
+                "self": "https://api.twitch.tv/kraken/users/squibsvids/follows/channels/novawar"
+            },
+            "channel": {
+                "mature": true,
+                "status": "Fianl Fantast XXXLIIXIIXIXIII-6 [TrueHDâ„¢]",
+                "broadcaster_language": "en",
+                "display_name": "NovaWar",
+                "game": "Lightning Returns: Final Fantasy XIII",
+                "language": "en",
+                "_id": 19317408,
+                "name": "novawar",
+                "created_at": "2011-01-07T05:26:20Z",
+                "updated_at": "2017-06-23T01:04:19Z",
+                "partner": true,
+                "logo": "https://static-cdn.jtvnw.net/jtv_user_pictures/novawar-profile_image-2367357eaeca519c-300x300.png",
+                "video_banner": "https://static-cdn.jtvnw.net/jtv_user_pictures/novawar-channel_offline_image-42f0aeef39824218-1920x1080.png",
+                "profile_banner": "https://static-cdn.jtvnw.net/jtv_user_pictures/novawar-profile_banner-6f049fea490ac211-480.png",
+                "profile_banner_background_color": null,
+                "url": "https://www.twitch.tv/novawar",
+                "views": 2806988,
+                "followers": 21497,
+                "_links": {
+                    "self": "https://api.twitch.tv/kraken/channels/novawar",
+                    "follows": "https://api.twitch.tv/kraken/channels/novawar/follows",
+                    "commercial": "https://api.twitch.tv/kraken/channels/novawar/commercial",
+                    "stream_key": "https://api.twitch.tv/kraken/channels/novawar/stream_key",
+                    "chat": "https://api.twitch.tv/kraken/chat/novawar",
+                    "features": "https://api.twitch.tv/kraken/channels/novawar/features",
+                    "subscriptions": "https://api.twitch.tv/kraken/channels/novawar/subscriptions",
+                    "editors": "https://api.twitch.tv/kraken/channels/novawar/editors",
+                    "teams": "https://api.twitch.tv/kraken/channels/novawar/teams",
+                    "videos": "https://api.twitch.tv/kraken/channels/novawar/videos"
+                },
+                "delay": null,
+                "banner": null,
+                "background": null
+            },
+            "notifications": true
+        },
+        {
+            "created_at": "2011-07-06T10:45:31Z",
+            "_links": {
+                "self": "https://api.twitch.tv/kraken/users/squibsvids/follows/channels/lifesaglitchtv"
+            },
+            "channel": {
+                "mature": true,
+                "status": "LAGTV SC2 Casting! [1080p@30] Join Raid Call ID# 5717541",
+                "broadcaster_language": null,
+                "display_name": "LifesAGlitchTV",
+                "game": "StarCraft II: Heart of the Swarm",
+                "language": "en",
+                "_id": 19245421,
+                "name": "lifesaglitchtv",
+                "created_at": "2011-01-04T02:56:53Z",
+                "updated_at": "2017-06-21T01:31:29Z",
+                "partner": true,
+                "logo": "https://static-cdn.jtvnw.net/jtv_user_pictures/lifesaglitchtv-profile_image-d14785bad69e565b-300x300.png",
+                "video_banner": null,
+                "profile_banner": null,
+                "profile_banner_background_color": null,
+                "url": "https://www.twitch.tv/lifesaglitchtv",
+                "views": 1022423,
+                "followers": 8636,
+                "_links": {
+                    "self": "https://api.twitch.tv/kraken/channels/lifesaglitchtv",
+                    "follows": "https://api.twitch.tv/kraken/channels/lifesaglitchtv/follows",
+                    "commercial": "https://api.twitch.tv/kraken/channels/lifesaglitchtv/commercial",
+                    "stream_key": "https://api.twitch.tv/kraken/channels/lifesaglitchtv/stream_key",
+                    "chat": "https://api.twitch.tv/kraken/chat/lifesaglitchtv",
+                    "features": "https://api.twitch.tv/kraken/channels/lifesaglitchtv/features",
+                    "subscriptions": "https://api.twitch.tv/kraken/channels/lifesaglitchtv/subscriptions",
+                    "editors": "https://api.twitch.tv/kraken/channels/lifesaglitchtv/editors",
+                    "teams": "https://api.twitch.tv/kraken/channels/lifesaglitchtv/teams",
+                    "videos": "https://api.twitch.tv/kraken/channels/lifesaglitchtv/videos"
+                },
+                "delay": null,
+                "banner": null,
+                "background": null
+            },
+            "notifications": true
+        }
+    ]
+}
