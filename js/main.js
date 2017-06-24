@@ -1,6 +1,6 @@
 // list of streams to get
 const channels = ['DrDisRespectLIVE', 'FreeCodeCamp', 'Grimmmz', 'LobosJR', 'MOONMOON_OW', 'TheAttack', 'Jummychu', 'shroud',
-  'LIRIK', 'sips_', 'Riot Games', 'trihex', 'Lethalfrag', 'Day9tv', 'LAGTVMaximusBlack'];
+  'LIRIK', 'sips_', 'Riot Games', 'trihex', 'Lethalfrag', 'Day9tv', 'LAGTVMaximusBlack', 'brunofin', 'comster404'];
 
 // create streamer dom elements
 const createStreamers = function () {
@@ -10,8 +10,9 @@ const createStreamers = function () {
     const streamerImg = document.createElement('img');
     const innerContainer = document.createElement('div');
     const streamerName = document.createElement('header');
-    const streamerStatusIcon = document.createElement('div');
+    const streamerGame = document.createElement('span');
     const streamerStatus = document.createElement('span');
+    const streamerStatusIcon = document.createElement('div');
     const viewStreamer = document.createElement('a');
     const viewStreamerContainer = document.createElement('div');
 
@@ -21,20 +22,22 @@ const createStreamers = function () {
     innerContainer.classList.add('inner-container');
     streamerName.classList.add('streamer-name');
     streamerName.innerHTML = channels[i];
-    streamerStatusIcon.classList.add('streamer-status-icon');
+    streamerGame.classList.add('streamer-game');
     streamerStatus.classList.add('streamer-status');
+    streamerStatusIcon.classList.add('streamer-status-icon');
     viewStreamer.classList.add('view-streamer');
-    viewStreamer.innerHTML = 'View Channel';
     viewStreamer.setAttribute('href', `https://www.twitch.tv/${channels[i].replace(/\s/g, '')}`);
     viewStreamer.setAttribute('target', '_blank');
+    viewStreamerContainer.innerHTML = 'View Channel';
     viewStreamerContainer.classList.add('view-streamer-container');
 
-    viewStreamerContainer.appendChild(viewStreamer);
+    viewStreamer.appendChild(viewStreamerContainer);
 
     innerContainer.appendChild(streamerName);
-    innerContainer.appendChild(streamerStatusIcon);
+    innerContainer.appendChild(streamerGame);
     innerContainer.appendChild(streamerStatus);
-    innerContainer.appendChild(viewStreamerContainer);
+    innerContainer.appendChild(streamerStatusIcon);
+    innerContainer.appendChild(viewStreamer);
 
     streamer.appendChild(streamerImg);
     streamer.appendChild(innerContainer);
@@ -59,6 +62,7 @@ const updateStreamerStatus = function (data) {
     for (let k = 0; k < streamer.length; k += 1) {
       if (!streamer[k].classList.contains('online')) {
         if (data.streams[i].channel.name === streamer[k].id) {
+          streamer[k].getElementsByClassName('streamer-game')[0].innerHTML = data.streams[i].channel.game;
           streamer[k].getElementsByClassName('streamer-status')[0].innerHTML = data.streams[i].channel.status;
           streamer[k].getElementsByClassName('streamer-status-icon')[0].style.background = 'green';
           streamer[k].classList.remove('offline');
@@ -121,7 +125,7 @@ const streamerStatus = function () {
     }
 
     xhr.open('GET', `https://api.twitch.tv/kraken/streams?channel=${channelList}&client_id=3blsvasj5g4dll5vzi16z9amnxtnhw`);
-    console.log(`https://api.twitch.tv/kraken/streams?channel=${channelList}&client_id=3blsvasj5g4dll5vzi16z9amnxtnhw`);
+
     xhr.onload = function () {
       if (xhr.status === 200) {
         resolve(JSON.parse(xhr.response));
@@ -186,12 +190,17 @@ for (let i = 0; i < channels.length; i += 1) {
   const channel = channels[i].replace(/\s/g, '').toLowerCase().toString();
   streamerInfo(channel).then((data) => {
     updateStreamerInfo(data, channel);
-  }).catch((error) => { alert(error); });
+  }).catch((error) => {
+    console.log(error);
+    const streamer = document.getElementById(channel);
+    streamer.getElementsByClassName('streamer-game')[0].innerHTML = 'Channel is missing or closed!';
+    streamer.getElementsByClassName('streamer-img')[0].src = 'img/missing.png';
+  });
 }
 
 streamerStatus().then((data) => {
   updateStreamerStatus(data);
-}).catch((error) => { alert(error); });
+}).catch((error) => { console.log(error); });
 
 document.getElementById('online').addEventListener('click', filter);
 document.getElementById('offline').addEventListener('click', filter);
