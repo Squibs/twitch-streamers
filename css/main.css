@@ -218,6 +218,10 @@ main {
 		flex-direction: column;
 		max-width: 300px;
 	}
+
+	.inner-container {
+		min-height: 200px;
+	}
 	
 	.streamer-img {
 		width: 100%;
