@@ -4,7 +4,7 @@
 body {
 	display: grid;
 	grid-template-columns: 2% 1fr 2%;
-	grid-template-rows: 5% 95%;
+	/* grid-template-rows: 5% 95% /* chrome fix; remove this? */
 	grid-template-areas:
 		"header			header		header"
 		"left-margin	main		right-margin";
@@ -12,6 +12,7 @@ body {
 	padding-bottom: 30px;
 	background-color: #eee;
 	min-width: 280px;
+	align-items: start; /* chrome fix */
 }
 
 #title {
