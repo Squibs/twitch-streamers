@@ -10,6 +10,7 @@ body {
 		"left-margin	main		right-margin";
 	margin: 0 auto;
 	padding-bottom: 30px;
+	background-color: #eee;
 }
 
 #title {
@@ -82,12 +83,12 @@ main {
 }
 
 #filter li:hover {
-	border-color: red;
+	border-color: white;
 	cursor: pointer;
 }
 
-#filter li:active {
-	border-bottom: 5px solid red;
+#filter li.active {
+	border-color: white;
 }
 
 @media (min-width: 66em) {
@@ -112,6 +113,13 @@ main {
 	justify-self: center;
 	width: 100%;
 	background-color: white;
+	transition: all .2s ease-in-out;
+	box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+.streamer:hover {
+	transform: scale(1.02);
+	box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 }
 
 .streamer-img {
@@ -133,6 +141,13 @@ main {
 	font-weight: 800;
 	word-wrap: break-word;
 	word-break: break-all;
+	margin-left: 5px;
+}
+
+.streamer-status {
+	margin-top: auto;
+	margin-left: 5px;
+	font-size: 12px;
 }
 
 .streamer-status-icon {
@@ -140,16 +155,17 @@ main {
 	height: 15px;
 	border-radius: 50%;
 	position: absolute;
-	top: 8%;
+	top: 5%;
 	right: 2%;
 }
 
 .view-streamer-container {
 	display: flex;
-	margin: auto 5px 5px 5px;
+	margin-top: auto;
 	height: 20%;
 	background-color: #6441a4;
 	justify-content: center;
+	margin: auto 5px 5px 5px;
 }
 
 .view-streamer {
@@ -179,7 +195,7 @@ main {
 }
 
 @media (min-width: 44em) {
-		.streamer {
+	.streamer {
 		flex-direction: column;
 		max-width: 300px;
 	}
@@ -191,5 +207,11 @@ main {
 	
 	.view-streamer-container {
 		min-height: 50px;
+	}
+	
+	.streamer-status {
+		min-height: 30px;
+		padding-bottom: 10px;
+		padding-top: 10px;
 	}
 }

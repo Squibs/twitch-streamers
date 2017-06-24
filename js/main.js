@@ -1,6 +1,8 @@
+// list of streams to get
 const channels = ['DrDisRespectLIVE', 'FreeCodeCamp', 'Grimmmz', 'LobosJR', 'MOONMOON_OW', 'TheAttack', 'Jummychu', 'shroud',
   'LIRIK', 'sips_', 'Riot Games', 'trihex', 'Lethalfrag', 'Day9tv', 'LAGTVMaximusBlack'];
 
+// create streamer dom elements
 const createStreamers = function () {
   for (let i = 0; i < channels.length; i += 1) {
     const main = document.getElementById('parent');
@@ -41,6 +43,7 @@ const createStreamers = function () {
   }
 };
 
+// set streamer image and display name
 const updateStreamerInfo = function (data, channel) {
   const streamer = document.getElementById(channel);
 
@@ -48,17 +51,15 @@ const updateStreamerInfo = function (data, channel) {
   streamer.getElementsByClassName('streamer-name')[0].innerHTML = data.display_name;
 };
 
+// set online status text & status icon
 const updateStreamerStatus = function (data) {
   const streamer = document.getElementsByClassName('streamer');
 
-  // set streamer image
-
-  // set online status text & status icon
   for (let i = 0; i < data.streams.length; i += 1) {
     for (let k = 0; k < streamer.length; k += 1) {
-      if (streamer[k].getElementsByClassName('streamer-status')[0].innerHTML !== 'Online') {
+      if (!streamer[k].classList.contains('online')) {
         if (data.streams[i].channel.name === streamer[k].id) {
-          streamer[k].getElementsByClassName('streamer-status')[0].innerHTML = 'Online';
+          streamer[k].getElementsByClassName('streamer-status')[0].innerHTML = data.streams[i].channel.status;
           streamer[k].getElementsByClassName('streamer-status-icon')[0].style.background = 'green';
           streamer[k].classList.add('online');
         } else {
@@ -71,6 +72,16 @@ const updateStreamerStatus = function (data) {
   }
 };
 
+/*  api call to get streamer information... only getting image and display name
+ *  this is making an api call for each streamer; twitch currently has no way of
+ *  getting all the information I need for this project in fewer api calls.
+ *  the other api call (streamerStatus) allows for a list to be returned, but
+ *  it will not display information for streamers that are currently not streaming,
+ *  and this api call (streamerInfo) doesn't allow for a list, and has to have an
+ *  individual call for each streamer.
+ *
+ *  CHANGE THIS FUNCTION / API CALL IF TWITCH HAS ISSUES WITH IT
+ */
 const streamerInfo = function (channel) {
   return new Promise((resolve, reject) => {
     const xhr = new XMLHttpRequest();
@@ -93,6 +104,7 @@ const streamerInfo = function (channel) {
   });
 };
 
+// api call to find online streamers
 const streamerStatus = function () {
   return new Promise((resolve, reject) => {
     const xhr = new XMLHttpRequest();
@@ -125,8 +137,19 @@ const streamerStatus = function () {
   });
 };
 
-createStreamers();
+// filter based on streamer status (offline, online, or show all)
+const filter = function (e) {
+  const remove = document.getElementsByClassName('active');
 
+  for (let i = 0; i < remove.length; i += 1) {
+    remove[i].classList.remove('active');
+  }
+
+  e.target.classList.add('active');
+};
+
+
+createStreamers();
 
 for (let i = 0; i < channels.length; i += 1) {
   const channel = channels[i].replace(/\s/g, '').toLowerCase().toString();
@@ -135,8 +158,10 @@ for (let i = 0; i < channels.length; i += 1) {
   }).catch((error) => { alert(error); });
 }
 
-
 streamerStatus().then((data) => {
   updateStreamerStatus(data);
 }).catch((error) => { alert(error); });
 
+document.getElementById('online').addEventListener('click', filter);
+document.getElementById('offline').addEventListener('click', filter);
+document.getElementById('all').addEventListener('click', filter);
