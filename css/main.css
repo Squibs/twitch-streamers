@@ -3,7 +3,7 @@
 *************************************************/
 body {
 	display: grid;
-	grid-template-columns: 5% 1fr 5%;
+	grid-template-columns: 2% 1fr 2%;
 	grid-template-rows: 5% 95%;
 	grid-template-areas:
 		"header			header		header"
@@ -32,15 +32,24 @@ main {
 	grid-template-columns: 1fr;
 	grid-row-gap: 1vh;
 	grid-column-gap: 1%;
+	justify-items: center;
 }
 
-@media (min-width: 66em) {
+@media (min-width: 1110px) {
+	body {
+	 grid-template-columns: 1fr 1000px 1fr;	
+	}
+	
 	main {
 		grid-template-columns: repeat(3, 1fr);
 	}
 }
 
-@media (max-width: 66em) and (min-width: 44em) {
+@media (max-width: 1109px) and (min-width: 720px) {
+	body {
+		grid-template-columns: 1fr 700px 1fr;
+	}
+	
 	main {
 		grid-template-columns: repeat(2, 1fr);
 	}
@@ -53,16 +62,22 @@ main {
 #title {
 	background-color: #6441a4;
 	height: 15vh;
-	margin-bottom: 5%;
+	min-height: 78px;
+	margin-bottom: 10px;
+	margin-top: 0;
 	display: flex;
 	flex-direction: column;
 	color: white;
+	z-index: 1;
+}
+
+#title h1 {
+	margin: 0 auto;
 }
 
 #filter {
 	display: grid;
-	grid-template-columns: 5% 1fr 1fr 1fr 5%;
-	grid-column-gap: 1%;
+	grid-template-columns: 0% 1fr 1fr 1fr 0%;
 	align-self: center;
 	width: 100%;
 	text-align: center;
@@ -76,22 +91,27 @@ main {
 	list-style-type: none;
 	max-width: 300px;
 	width: 100%;
-	border-bottom: 5px solid transparent;
+	border-bottom: 10px solid transparent;
 	justify-self: center;
 	padding-top: 5px;
 	font-size: 1.4em;
+	color: #bbb;
+	margin-left: -10px;
+	margin-right: -10px;
 }
 
 #filter li:hover {
 	border-color: white;
 	cursor: pointer;
+	color: white;
 }
 
 #filter li.active {
 	border-color: white;
+	color: white;
 }
 
-@media (min-width: 66em) {
+@media (min-width: 1110px) {
 	#filter li:nth-child(3n-4) {
 		justify-self: end;
 	}
@@ -99,8 +119,18 @@ main {
 	#filter li:nth-child(3n-2) {
 		justify-self: start;
 	}
+	
+	#filter {
+		grid-column-gap: 47px;
+		grid-template-columns: 1fr 300px 300px 300px 1fr;
+	}
 }
 
+@media (max-width: 1109px) and (min-width: 720px) {
+	#filter {
+		grid-template-columns: 1fr 218px 218px 218px 1fr;
+	}
+}
 
 /*************************************************
 	STREAMERS
@@ -110,7 +140,6 @@ main {
 	display: flex;
 	align-items: center;
 	background-color: grey;
-	justify-self: center;
 	width: 100%;
 	background-color: white;
 	transition: all .2s ease-in-out;
@@ -166,35 +195,19 @@ main {
 	background-color: #6441a4;
 	justify-content: center;
 	margin: auto 5px 5px 5px;
+	padding: 5px;
 }
 
 .view-streamer {
 	text-align: center;
 	color: white;
 	align-self: center;
+	text-decoration: none;
+	font-size: 1.25em;
 }
 
-@media (min-width: 66em) {
-	main section:nth-child(3n) {
-		justify-self: start;
-	}
 
-	main section:nth-child(3n-2) {
-		justify-self: end;
-	}
-}
-
-@media (max-width: 66em) and (min-width: 44em) {
-	main section:nth-child(2n) {
-		justify-self: start;
-	}
-	
-	main section:nth-child(2n-1) {
-		justify-self: end;
-	}
-}
-
-@media (min-width: 44em) {
+@media (min-width: 720px) {
 	.streamer {
 		flex-direction: column;
 		max-width: 300px;

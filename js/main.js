@@ -61,6 +61,7 @@ const updateStreamerStatus = function (data) {
         if (data.streams[i].channel.name === streamer[k].id) {
           streamer[k].getElementsByClassName('streamer-status')[0].innerHTML = data.streams[i].channel.status;
           streamer[k].getElementsByClassName('streamer-status-icon')[0].style.background = 'green';
+          streamer[k].classList.remove('offline');
           streamer[k].classList.add('online');
         } else {
           streamer[k].getElementsByClassName('streamer-status')[0].innerHTML = 'Offline';
@@ -120,7 +121,7 @@ const streamerStatus = function () {
     }
 
     xhr.open('GET', `https://api.twitch.tv/kraken/streams?channel=${channelList}&client_id=3blsvasj5g4dll5vzi16z9amnxtnhw`);
-
+    console.log(`https://api.twitch.tv/kraken/streams?channel=${channelList}&client_id=3blsvasj5g4dll5vzi16z9amnxtnhw`);
     xhr.onload = function () {
       if (xhr.status === 200) {
         resolve(JSON.parse(xhr.response));
@@ -146,6 +147,36 @@ const filter = function (e) {
   }
 
   e.target.classList.add('active');
+
+  const filterValue = e.target.id;
+  const offline = document.getElementsByClassName('offline');
+  const online = document.getElementsByClassName('online');
+
+  if (filterValue === 'online') {
+    for (let i = 0; i < offline.length; i += 1) {
+      offline[i].style.display = 'none';
+    }
+
+    for (let i = 0; i < online.length; i += 1) {
+      online[i].style.display = 'flex';
+    }
+  } else if (filterValue === 'offline') {
+    for (let i = 0; i < online.length; i += 1) {
+      online[i].style.display = 'none';
+    }
+
+    for (let i = 0; i < offline.length; i += 1) {
+      offline[i].style.display = 'flex';
+    }
+  } else {
+    for (let i = 0; i < online.length; i += 1) {
+      online[i].style.display = 'flex';
+    }
+
+    for (let i = 0; i < offline.length; i += 1) {
+      offline[i].style.display = 'flex';
+    }
+  }
 };
 
 
