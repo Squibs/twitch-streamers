@@ -1,6 +1,6 @@
 // list of streams to get
 const channels = ['DrDisRespectLIVE', 'FreeCodeCamp', 'Grimmmz', 'LobosJR', 'MOONMOON_OW', 'TheAttack', 'Jummychu', 'shroud',
-  'LIRIK', 'sips_', 'Riot Games', 'trihex', 'Lethalfrag', 'Day9tv', 'LAGTVMaximusBlack', 'brunofin', 'comster404'];
+  'LIRIK', 'sips_', 'Riot Games', 'trihex', 'Lethalfrag', 'Day9tv', 'LAGTVMaximusBlack'];
 
 // create streamer dom elements
 const createStreamers = function () {
