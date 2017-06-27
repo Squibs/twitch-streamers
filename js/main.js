@@ -143,7 +143,7 @@ const streamerStatus = function () {
 };
 
 // filter based on streamer status (offline, online, or show all)
-const filter = function (e) {
+const filters = function (e) {
   const remove = document.getElementsByClassName('active');
 
   for (let i = 0; i < remove.length; i += 1) {
@@ -202,6 +202,6 @@ streamerStatus().then((data) => {
   updateStreamerStatus(data);
 }).catch((error) => { console.log(error); });
 
-document.getElementById('online').addEventListener('click', filter);
-document.getElementById('offline').addEventListener('click', filter);
-document.getElementById('all').addEventListener('click', filter);
+document.getElementById('online').addEventListener('click', filters);
+document.getElementById('offline').addEventListener('click', filters);
+document.getElementById('all').addEventListener('click', filters);
