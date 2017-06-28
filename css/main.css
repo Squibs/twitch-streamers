@@ -9,15 +9,17 @@ body {
 		"header			header		header"
 		"left-margin	main		right-margin";
 	margin: 0 auto;
-	padding-bottom: 30px;
 	background-color: #eee;
 	min-width: 280px;
 	align-items: start; /* chrome fix */
+	height: 1%; /* only solution i could come up with for another iOS fix */
+	overflow-x: hidden;
 }
 
 #title {
 	grid-area: header;
 	text-align: center;
+	height: inherit;
 }
 
 #left-margin {
@@ -35,6 +37,8 @@ main {
 	grid-row-gap: 1vh;
 	grid-column-gap: 1%;
 	justify-items: center;
+	height: 100%;
+	padding-bottom: 8px;
 }
 
 @media (min-width: 1110px) {
@@ -93,6 +97,7 @@ main {
 	list-style-type: none;
 	max-width: 300px;
 	width: 100%;
+	height: 28px;
 	border-bottom: 10px solid transparent;
 	justify-self: center;
 	padding-top: 5px;
@@ -144,7 +149,6 @@ main {
 	background-color: grey;
 	width: 100%;
 	height: 100%;
-	min-height: 100%;
 	background-color: white;
 	transition: all .2s ease-in-out;
 	box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
@@ -185,7 +189,7 @@ main {
 }
 
 .streamer-status {
-	margin-top: auto;
+	margin-top: 10px;
 	margin-left: 5px;
 	font-size: 12px;
 	margin-bottom: 10px;
@@ -201,7 +205,8 @@ main {
 }
 
 .view-streamer {
-  height: 25%;
+  	height: 25%;
+	min-height: 25px;
 	margin: 5px;
 	background-color: #6441a4;
 	display: flex;
@@ -210,6 +215,7 @@ main {
 	text-decoration: none;
 	color: white;
 	font-size: 1.25em;
+	margin-top: auto;
 }
 
 .view-streamer:hover {
