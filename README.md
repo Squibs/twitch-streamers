@@ -2,7 +2,7 @@
 
 A Twitch streamer live-status site I have created while going through the intermediate front end development project challenges at https://freeCodeCamp.com
 
-## [Local Weather](https://github.com/Squibs/freeCodeCamp/tree/master/Front%20End%20Development%20Certification#twitch-streamer-status) (Go Back)
+## [Front End Development Projects](https://github.com/Squibs/freeCodeCamp/tree/master/Front%20End%20Development%20Certification#twitch-streamer-status) (Go Back)
 
 <a href="https://squibs.github.io/twitch-streamers" target="_blank"><img src="img/screenshot-twitch-streamers.png" height="600" alt="Screenshot of my Twitch streamer status app / website"/></a>
 
