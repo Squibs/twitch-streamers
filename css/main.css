@@ -14,6 +14,7 @@ body {
 	align-items: start; /* chrome fix */
 	height: 1%; /* only solution i could come up with for another iOS fix */
 	overflow-x: hidden;
+	overflow-y: scroll;
 }
 
 #title {
