@@ -60,19 +60,19 @@ const updateStreamerStatus = function (data) {
 
   for (let i = 0; i < data.streams.length; i += 1) {
     for (let k = 0; k < streamer.length; k += 1) {
-      if (!streamer[k].classList.contains('online')) {
-        if (data.streams[i].channel.name === streamer[k].id) {
-          streamer[k].getElementsByClassName('streamer-game')[0].innerHTML = data.streams[i].channel.game;
-          streamer[k].getElementsByClassName('streamer-status')[0].innerHTML = data.streams[i].channel.status;
-          streamer[k].getElementsByClassName('streamer-status-icon')[0].style.background = 'green';
-          streamer[k].classList.remove('offline');
-          streamer[k].classList.add('online');
-        } else {
-          streamer[k].getElementsByClassName('streamer-status')[0].innerHTML = 'Offline';
-          streamer[k].getElementsByClassName('streamer-status-icon')[0].style.background = 'red';
-          streamer[k].classList.add('offline');
-        }
+      //if (!streamer[k].classList.contains('online')) {
+      if (data.streams[i].channel.name === streamer[k].id) {
+        streamer[k].getElementsByClassName('streamer-game')[0].innerHTML = data.streams[i].channel.game;
+        streamer[k].getElementsByClassName('streamer-status')[0].innerHTML = data.streams[i].channel.status;
+        streamer[k].getElementsByClassName('streamer-status-icon')[0].style.background = 'green';
+        streamer[k].classList.remove('offline');
+        streamer[k].classList.add('online');
+      } else {
+        streamer[k].getElementsByClassName('streamer-status')[0].innerHTML = 'Offline';
+        streamer[k].getElementsByClassName('streamer-status-icon')[0].style.background = 'red';
+        streamer[k].classList.add('offline');
       }
+      //}
     }
   }
 };
