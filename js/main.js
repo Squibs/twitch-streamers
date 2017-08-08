@@ -1,6 +1,6 @@
 // list of streams to get
 const channels = ['DrDisRespectLIVE', 'FreeCodeCamp', 'Grimmmz', 'LobosJR', 'MOONMOON_OW', 'TheAttack', 'Jummychu', 'shroud',
-  'LIRIK', 'Riot Games', 'trihex', 'Lethalfrag', 'Day9tv', 'LAGTVMaximusBlack'];
+  'LIRIK', 'sips_', 'Riot Games', 'trihex', 'Lethalfrag', 'Day9tv', 'LAGTVMaximusBlack'];
 
 // create streamer dom elements
 const createStreamers = function () {
@@ -31,6 +31,12 @@ const createStreamers = function () {
     viewStreamerContainer.innerHTML = 'View Channel';
     viewStreamerContainer.classList.add('view-streamer-container');
 
+
+    // default to offline
+    streamerStatus.innerHTML = 'Offline';
+    streamerStatusIcon.style.background = 'red';
+    streamer.classList.add('offline');
+
     viewStreamer.appendChild(viewStreamerContainer);
 
     innerContainer.appendChild(streamerName);
@@ -60,18 +66,19 @@ const updateStreamerStatus = function (data) {
 
   for (let i = 0; i < data.streams.length; i += 1) {
     for (let k = 0; k < streamer.length; k += 1) {
-      streamer[k].getElementsByClassName('streamer-status')[0].innerHTML = 'Offline';
-      streamer[k].getElementsByClassName('streamer-status-icon')[0].style.background = 'red';
-      streamer[k].classList.add('offline');
-      //if (!streamer[k].classList.contains('online')) {
-      if (data.streams[i].channel.name === streamer[k].id) {
-        streamer[k].getElementsByClassName('streamer-game')[0].innerHTML = data.streams[i].channel.game;
-        streamer[k].getElementsByClassName('streamer-status')[0].innerHTML = data.streams[i].channel.status;
-        streamer[k].getElementsByClassName('streamer-status-icon')[0].style.background = 'green';
-        streamer[k].classList.remove('offline');
-        streamer[k].classList.add('online');
+      if (!streamer[k].classList.contains('online')) {
+        if (data.streams[i].channel.name === streamer[k].id) {
+          streamer[k].getElementsByClassName('streamer-game')[0].innerHTML = data.streams[i].channel.game;
+          streamer[k].getElementsByClassName('streamer-status')[0].innerHTML = data.streams[i].channel.status;
+          streamer[k].getElementsByClassName('streamer-status-icon')[0].style.background = 'green';
+          streamer[k].classList.remove('offline');
+          streamer[k].classList.add('online');
+        } else {
+          streamer[k].getElementsByClassName('streamer-status')[0].innerHTML = 'Offline';
+          streamer[k].getElementsByClassName('streamer-status-icon')[0].style.background = 'red';
+          streamer[k].classList.add('offline');
+        }
       }
-      //}
     }
   }
 };
