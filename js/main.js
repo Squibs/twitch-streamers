@@ -1,6 +1,5 @@
 // list of streams to get
-const channels = ['FreeCodeCamp', 'Grimmmz', 'LobosJR', 'MOONMOON', 'Jummychu', 'shroud',
-  'LIRIK', 'sips_', 'Riot Games', 'trihex', 'Lethalfrag', 'Day9tv', 'LAGTVMaximusBlack', 'ESL_SC2', 'Jerma985', 'ClintStevens', 'Dexbonus', 'AvoidingThePuddle', 'JesseCox', 'nl_Kripp'];
+const channels = ['FreeCodeCamp', 'Grimmmz', 'LobosJR', 'MOONMOON', 'Jummychu', 'shroud', 'LIRIK', 'sips_', 'Riot Games', 'trihex', 'Lethalfrag', 'Day9tv', 'LAGTVMaximusBlack', 'Jerma985', 'ClintStevens', 'Dexbonus', 'AvoidingThePuddle', 'JesseCox', 'nl_Kripp'];
 
 // create streamer dom elements
 const createStreamers = function () {
@@ -53,11 +52,22 @@ const createStreamers = function () {
 };
 
 // set streamer image and display name
-const updateStreamerInfo = function (data, channel) {
-  const streamer = document.getElementById(channel);
+const updateStreamerInfo = function (data) {
+  for (let k = 0; k < channels.length; k += 1) {
+    const channel = document.getElementById(channels[k].replace(/\s/g, '').toLowerCase().toString());
+    let skipFlag = false;
 
-  streamer.getElementsByClassName('streamer-img')[0].src = data.profile_image_url;
-  streamer.getElementsByClassName('streamer-name')[0].innerHTML = data.display_name;
+    for (let i = 0; i < data.length; i += 1) {
+      if (data[i].login === channel.id) {
+        channel.getElementsByClassName('streamer-img')[0].src = data[i].profile_image_url;
+        channel.getElementsByClassName('streamer-name')[0].innerHTML = data[i].display_name;
+        skipFlag = true;
+      } else if (skipFlag === false) {
+        channel.getElementsByClassName('streamer-game')[0].innerHTML = 'Channel is missing or closed!';
+        channel.getElementsByClassName('streamer-img')[0].src = 'img/missing.png';
+      }
+    }
+  }
 };
 
 // set online status text & status icon
@@ -83,21 +93,27 @@ const updateStreamerStatus = function (data) {
   }
 };
 
-/*  api call to get streamer information... only getting image and display name
- *  this is making an api call for each streamer; twitch currently has no way of
- *  getting all the information I need for this project in fewer api calls.
- *  the other api call (streamerStatus) allows for a list to be returned, but
- *  it will not display information for streamers that are currently not streaming,
- *  and this api call (streamerInfo) doesn't allow for a list, and has to have an
- *  individual call for each streamer.
- *
- *  CHANGE THIS FUNCTION / API CALL IF TWITCH HAS ISSUES WITH IT
- */
-const streamerInfo = function (channel) {
+const createListForXHR = (query) => {
+  let channelList = '';
+
+  for (let i = 0; i < channels.length; i += 1) {
+    channelList += `${query}=${channels[i].replace(/\s/g, '').toLowerCase().toString()}`;
+
+    if (i < channels.length - 1) {
+      channelList += '&';
+    }
+  }
+
+  return channelList;
+};
+
+const customXHRRequest = (slug, query) => {
   return new Promise((resolve, reject) => {
     const xhr = new XMLHttpRequest();
 
-    xhr.open('GET', `https://wind-bow.glitch.me/helix/users?login=${channel}`);
+    channelList = createListForXHR(query);
+
+    xhr.open('GET', `https://wind-bow.glitch.me/helix/${slug}?${channelList}`);
 
     xhr.onload = function () {
       if (xhr.status === 200) {
@@ -115,37 +131,13 @@ const streamerInfo = function (channel) {
   });
 };
 
+const streamerInfo = function () {
+  return customXHRRequest('users', 'login')
+};
+
 // api call to find online streamers
 const streamerStatus = function () {
-  return new Promise((resolve, reject) => {
-    const xhr = new XMLHttpRequest();
-
-    let channelList = '';
-
-    for (let i = 0; i < channels.length; i += 1) {
-      channelList += `user_login=${channels[i].replace(/\s/g, '').toLowerCase().toString()}`;
-
-      if (i < channels.length - 1) {
-        channelList += '&';
-      }
-    }
-
-    xhr.open('GET', `https://wind-bow.glitch.me/helix/streams?${channelList}`);
-
-    xhr.onload = function () {
-      if (xhr.status === 200) {
-        resolve(JSON.parse(xhr.response));
-      } else {
-        reject(Error(xhr.statusText));
-      }
-    };
-
-    xhr.onerror = function (error) {
-      reject(Error(`Network Error: ${error}`));
-    };
-
-    xhr.send();
-  });
+  return customXHRRequest('streams', 'user_login');
 };
 
 // filter based on streamer status (offline, online, or show all)
@@ -192,17 +184,9 @@ const filters = function (e) {
 
 createStreamers();
 
-for (let i = 0; i < channels.length; i += 1) {
-  const channel = channels[i].replace(/\s/g, '').toLowerCase().toString();
-  streamerInfo(channel).then((data) => {
-    updateStreamerInfo(data.data[0], channel);
-  }).catch((error) => {
-    console.log(error);
-    const streamer = document.getElementById(channel);
-    streamer.getElementsByClassName('streamer-game')[0].innerHTML = 'Channel is missing or closed!';
-    streamer.getElementsByClassName('streamer-img')[0].src = 'img/missing.png';
-  });
-}
+streamerInfo().then((data) => {
+  updateStreamerInfo(data.data);
+}).catch((error) => { console.log(error); });
 
 streamerStatus().then((data) => {
   updateStreamerStatus(data.data);
