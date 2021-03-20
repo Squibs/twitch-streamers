@@ -1,6 +1,6 @@
 // list of streams to get
-const channels = ['DrDisRespectLIVE', 'FreeCodeCamp', 'Grimmmz', 'LobosJR', 'MOONMOON_OW', 'TheAttack', 'Jummychu', 'shroud',
-  'LIRIK', 'sips_', 'Riot Games', 'trihex', 'Lethalfrag', 'Day9tv', 'LAGTVMaximusBlack'];
+const channels = ['FreeCodeCamp', 'Grimmmz', 'LobosJR', 'MOONMOON', 'Jummychu', 'shroud',
+  'LIRIK', 'sips_', 'Riot Games', 'trihex', 'Lethalfrag', 'Day9tv', 'LAGTVMaximusBlack', 'ESL_SC2', 'Jerma985', 'ClintStevens', 'Dexbonus', 'AvoidingThePuddle', 'JesseCox', 'nl_Kripp'];
 
 // create streamer dom elements
 const createStreamers = function () {
@@ -56,7 +56,7 @@ const createStreamers = function () {
 const updateStreamerInfo = function (data, channel) {
   const streamer = document.getElementById(channel);
 
-  streamer.getElementsByClassName('streamer-img')[0].src = data.logo;
+  streamer.getElementsByClassName('streamer-img')[0].src = data.profile_image_url;
   streamer.getElementsByClassName('streamer-name')[0].innerHTML = data.display_name;
 };
 
@@ -64,12 +64,12 @@ const updateStreamerInfo = function (data, channel) {
 const updateStreamerStatus = function (data) {
   const streamer = document.getElementsByClassName('streamer');
 
-  for (let i = 0; i < data.streams.length; i += 1) {
+  for (let i = 0; i < data.length; i += 1) {
     for (let k = 0; k < streamer.length; k += 1) {
       if (!streamer[k].classList.contains('online')) {
-        if (data.streams[i].channel.name === streamer[k].id) {
-          streamer[k].getElementsByClassName('streamer-game')[0].innerHTML = data.streams[i].channel.game;
-          streamer[k].getElementsByClassName('streamer-status')[0].innerHTML = data.streams[i].channel.status;
+        if (data[i].user_login === streamer[k].id) {
+          streamer[k].getElementsByClassName('streamer-game')[0].innerHTML = data[i].game_name;
+          streamer[k].getElementsByClassName('streamer-status')[0].innerHTML = data[i].type;
           streamer[k].getElementsByClassName('streamer-status-icon')[0].style.background = 'green';
           streamer[k].classList.remove('offline');
           streamer[k].classList.add('online');
@@ -97,7 +97,7 @@ const streamerInfo = function (channel) {
   return new Promise((resolve, reject) => {
     const xhr = new XMLHttpRequest();
 
-    xhr.open('GET', `https://api.twitch.tv/kraken/channels/${channel}?client_id=3blsvasj5g4dll5vzi16z9amnxtnhw`);
+    xhr.open('GET', `https://wind-bow.glitch.me/helix/users?login=${channel}`);
 
     xhr.onload = function () {
       if (xhr.status === 200) {
@@ -123,14 +123,14 @@ const streamerStatus = function () {
     let channelList = '';
 
     for (let i = 0; i < channels.length; i += 1) {
-      channelList += channels[i].replace(/\s/g, '').toLowerCase().toString();
+      channelList += `user_login=${channels[i].replace(/\s/g, '').toLowerCase().toString()}`;
 
       if (i < channels.length - 1) {
-        channelList += ',';
+        channelList += '&';
       }
     }
 
-    xhr.open('GET', `https://api.twitch.tv/kraken/streams?channel=${channelList}&client_id=3blsvasj5g4dll5vzi16z9amnxtnhw`);
+    xhr.open('GET', `https://wind-bow.glitch.me/helix/streams?${channelList}`);
 
     xhr.onload = function () {
       if (xhr.status === 200) {
@@ -195,7 +195,7 @@ createStreamers();
 for (let i = 0; i < channels.length; i += 1) {
   const channel = channels[i].replace(/\s/g, '').toLowerCase().toString();
   streamerInfo(channel).then((data) => {
-    updateStreamerInfo(data, channel);
+    updateStreamerInfo(data.data[0], channel);
   }).catch((error) => {
     console.log(error);
     const streamer = document.getElementById(channel);
@@ -205,7 +205,7 @@ for (let i = 0; i < channels.length; i += 1) {
 }
 
 streamerStatus().then((data) => {
-  updateStreamerStatus(data);
+  updateStreamerStatus(data.data);
 }).catch((error) => { console.log(error); });
 
 document.getElementById('online').addEventListener('click', filters);
