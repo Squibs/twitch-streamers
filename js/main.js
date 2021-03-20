@@ -53,21 +53,31 @@ const createStreamers = function () {
 
 // set streamer image and display name
 const updateStreamerInfo = function (data) {
+  const checkForMissing = [...channels];
+
   for (let k = 0; k < channels.length; k += 1) {
     const channel = document.getElementById(channels[k].replace(/\s/g, '').toLowerCase().toString());
-    let skipFlag = false;
 
     for (let i = 0; i < data.length; i += 1) {
       if (data[i].login === channel.id) {
         channel.getElementsByClassName('streamer-img')[0].src = data[i].profile_image_url;
         channel.getElementsByClassName('streamer-name')[0].innerHTML = data[i].display_name;
-        skipFlag = true;
-      } else if (skipFlag === false) {
-        channel.getElementsByClassName('streamer-game')[0].innerHTML = 'Channel is missing or closed!';
-        channel.getElementsByClassName('streamer-img')[0].src = 'img/missing.png';
-      }
+        
+        for (let j = 0; j < checkForMissing.length; j += 1) {
+          if (checkForMissing[j] === channels[k]) {
+            checkForMissing.splice(j, 1);
+            j = 0;
+          }
+        }
+      } 
     }
   }
+
+  for (let i = 0; i < checkForMissing.length; i += 1) {
+    document.getElementById(checkForMissing[i].replace(/\s/g, '').toLowerCase().toString()).getElementsByClassName('streamer-game')[0].innerHTML = 'Channel is missing or closed!';
+    document.getElementById(checkForMissing[i].replace(/\s/g, '').toLowerCase().toString()).getElementsByClassName('streamer-img')[0].src = 'img/missing.png';
+  }
+
 };
 
 // set online status text & status icon
