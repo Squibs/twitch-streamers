@@ -1,5 +1,5 @@
 // list of streams to get
-const channels = ['FreeCodeCamp', 'Grimmmz', 'LobosJR', 'MOONMOON', 'Jummychu', 'shroud', 'LIRIK', 'sips_', 'Riot Games', 'trihex', 'Lethalfrag', 'Day9tv', 'LAGTVMaximusBlack', 'Jerma985', 'ClintStevens', 'Dexbonus', 'AvoidingThePuddle', 'JesseCox', 'nl_Kripp'];
+const channels = ["ESL_SC2", "OgamingSC2", "cretetion", "freecodecamp", "storbeck", "habathcx", "RobotCaleb", "noobs2ninjas"];
 
 // create streamer dom elements
 const createStreamers = function () {
@@ -103,27 +103,40 @@ const updateStreamerStatus = function (data) {
   }
 };
 
-const createListForXHR = (query) => {
-  let channelList = '';
+const customXHRRequest = (slug) => {
+  // slug = streams or channels
+  let channelData;
 
-  for (let i = 0; i < channels.length; i += 1) {
-    channelList += `${query}=${channels[i].replace(/\s/g, '').toLowerCase().toString()}`;
+  channels.forEach(channel => {
+    new Promise((resolve, reject) => {
+      const xhr = new XMLHttpRequest();
 
-    if (i < channels.length - 1) {
-      channelList += '&';
-    }
-  }
+      xhr.open('GET', `https://twitch-proxy.freecodecamp.rocks/${slug}/${channel}`);
 
-  return channelList;
-};
+      xhr.onload = function () {
+        if (xhr.status === 200) {
+          resolve(console.log(JSON.parse(xhr.response)));
+        } else {
+          reject(Error(xhr.statusText));
+        }
+      };
 
-const customXHRRequest = (slug, query) => {
+      xhr.onerror = function (error) {
+        reject(Error(`Network Error: ${error}`));
+      }
+
+      xhr.send();
+    });
+  });
+
+  return channelData;
+
   return new Promise((resolve, reject) => {
     const xhr = new XMLHttpRequest();
 
     channelList = createListForXHR(query);
 
-    xhr.open('GET', `https://wind-bow.glitch.me/helix/${slug}?${channelList}`);
+    xhr.open('GET', `https://twitch-proxy.freecodecamp.rocks/${slug}?${channelList}`);
 
     xhr.onload = function () {
       if (xhr.status === 200) {
@@ -142,12 +155,12 @@ const customXHRRequest = (slug, query) => {
 };
 
 const streamerInfo = function () {
-  return customXHRRequest('users', 'login')
+  return customXHRRequest('channels')
 };
 
 // api call to find online streamers
 const streamerStatus = function () {
-  return customXHRRequest('streams', 'user_login');
+  return customXHRRequest('streams');
 };
 
 // filter based on streamer status (offline, online, or show all)
@@ -194,13 +207,15 @@ const filters = function (e) {
 
 createStreamers();
 
-streamerInfo().then((data) => {
-  updateStreamerInfo(data.data);
-}).catch((error) => { console.log(error); });
+streamerInfo();
 
-streamerStatus().then((data) => {
-  updateStreamerStatus(data.data);
-}).catch((error) => { console.log(error); });
+// streamerInfo().then((data) => {
+//   updateStreamerInfo(data.data);
+// }).catch((error) => { console.log(error); });
+
+// streamerStatus().then((data) => {
+//   updateStreamerStatus(data.data);
+// }).catch((error) => { console.log(error); });
 
 document.getElementById('online').addEventListener('click', filters);
 document.getElementById('offline').addEventListener('click', filters);
