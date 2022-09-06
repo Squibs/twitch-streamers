@@ -1,5 +1,3 @@
-require('dotenv').config();
-
 // list of streams to get
 const channels = ['FreeCodeCamp', 'Grimmmz', 'LobosJR', 'MOONMOON', 'Jummychu', 'shroud', 'LIRIK', 'sips_', 'Riot Games', 'trihex', 'Lethalfrag', 'Day9tv', 'LAGTVMaximusBlack', 'Jerma985', 'ClintStevens', 'Dexbonus', 'AvoidingThePuddle', 'JesseCox', 'nl_Kripp'];
 
