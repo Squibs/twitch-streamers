@@ -59,10 +59,18 @@ const updateStreamerInfo = function (data) {
     const channel = document.getElementById(channels[k].replace(/\s/g, '').toLowerCase().toString());
 
     for (let i = 0; i < data.length; i += 1) {
-      if (data[i].login === channel.id) {
-        channel.getElementsByClassName('streamer-img')[0].src = data[i].profile_image_url;
+      if (data[i].name === channel.id) {
+        channel.getElementsByClassName('streamer-img')[0].src = data[i].logo;
         channel.getElementsByClassName('streamer-name')[0].innerHTML = data[i].display_name;
-        
+
+        // check if image is 403
+        const checkImage = new XMLHttpRequest();
+        checkImage.open('HEAD', data[i].logo, false);
+        checkImage.send();
+        if (checkImage.status == 404 || checkImage.status == 403) {
+          channel.getElementsByClassName('streamer-img')[0].src = 'img/missing.png';
+        }
+
         for (let j = 0; j < checkForMissing.length; j += 1) {
           if (checkForMissing[j] === channels[k]) {
             checkForMissing.splice(j, 1);
@@ -87,16 +95,18 @@ const updateStreamerStatus = function (data) {
   for (let i = 0; i < data.length; i += 1) {
     for (let k = 0; k < streamer.length; k += 1) {
       if (!streamer[k].classList.contains('online')) {
-        if (data[i].user_login === streamer[k].id) {
-          streamer[k].getElementsByClassName('streamer-game')[0].innerHTML = data[i].game_name;
-          streamer[k].getElementsByClassName('streamer-status')[0].innerHTML = data[i].type;
-          streamer[k].getElementsByClassName('streamer-status-icon')[0].style.background = 'green';
-          streamer[k].classList.remove('offline');
-          streamer[k].classList.add('online');
-        } else {
-          streamer[k].getElementsByClassName('streamer-status')[0].innerHTML = 'Offline';
-          streamer[k].getElementsByClassName('streamer-status-icon')[0].style.background = 'red';
-          streamer[k].classList.add('offline');
+        if (data[i].stream != null) { // mostly to suppress errors
+          if (data[i].stream.channel.name === streamer[k].id) {
+            streamer[k].getElementsByClassName('streamer-game')[0].innerHTML = data[i].stream.game;
+            streamer[k].getElementsByClassName('streamer-status')[0].innerHTML = data[i].stream.channel.status;
+            streamer[k].getElementsByClassName('streamer-status-icon')[0].style.background = 'green';
+            streamer[k].classList.remove('offline');
+            streamer[k].classList.add('online');
+          } else {
+            streamer[k].getElementsByClassName('streamer-status')[0].innerHTML = 'Offline';
+            streamer[k].getElementsByClassName('streamer-status-icon')[0].style.background = 'red';
+            streamer[k].classList.add('offline');
+          }
         }
       }
     }
@@ -105,17 +115,17 @@ const updateStreamerStatus = function (data) {
 
 const customXHRRequest = (slug) => {
   // slug = streams or channels
-  let channelData;
+  let promises = [];
 
   channels.forEach(channel => {
-    new Promise((resolve, reject) => {
+    promises.push(new Promise((resolve, reject) => {
       const xhr = new XMLHttpRequest();
 
-      xhr.open('GET', `https://twitch-proxy.freecodecamp.rocks/${slug}/${channel}`);
+      xhr.open('GET', `https://twitch-proxy.freecodecamp.rocks/twitch-api/${slug}/${channel}`);
 
       xhr.onload = function () {
         if (xhr.status === 200) {
-          resolve(console.log(JSON.parse(xhr.response)));
+          resolve(JSON.parse(xhr.response));
         } else {
           reject(Error(xhr.statusText));
         }
@@ -126,31 +136,17 @@ const customXHRRequest = (slug) => {
       }
 
       xhr.send();
-    });
+    }));
   });
 
-  return channelData;
+  Promise.all(promises).then((data) => {
+    if (slug == 'channels') {
+      updateStreamerInfo(data);
+    }
 
-  return new Promise((resolve, reject) => {
-    const xhr = new XMLHttpRequest();
-
-    channelList = createListForXHR(query);
-
-    xhr.open('GET', `https://twitch-proxy.freecodecamp.rocks/${slug}?${channelList}`);
-
-    xhr.onload = function () {
-      if (xhr.status === 200) {
-        resolve(JSON.parse(xhr.response));
-      } else {
-        reject(Error(xhr.statusText));
-      }
-    };
-
-    xhr.onerror = function (error) {
-      reject(Error(`Network Error: ${error}`));
-    };
-
-    xhr.send();
+    if (slug == 'streams') {
+      updateStreamerStatus(data);
+    }
   });
 };
 
@@ -208,14 +204,7 @@ const filters = function (e) {
 createStreamers();
 
 streamerInfo();
-
-// streamerInfo().then((data) => {
-//   updateStreamerInfo(data.data);
-// }).catch((error) => { console.log(error); });
-
-// streamerStatus().then((data) => {
-//   updateStreamerStatus(data.data);
-// }).catch((error) => { console.log(error); });
+streamerStatus();
 
 document.getElementById('online').addEventListener('click', filters);
 document.getElementById('offline').addEventListener('click', filters);
