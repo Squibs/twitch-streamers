@@ -30,6 +30,8 @@ const createStreamers = function () {
     viewStreamerContainer.innerHTML = 'View Channel';
     viewStreamerContainer.classList.add('view-streamer-container');
 
+    // image error handling
+    streamerImg.setAttribute('onerror', 'this.onerror=null;this.src="img/missing.png";');
 
     // default to offline
     streamerStatus.innerHTML = 'Offline';
@@ -62,14 +64,6 @@ const updateStreamerInfo = function (data) {
       if (data[i].name === channel.id) {
         channel.getElementsByClassName('streamer-img')[0].src = data[i].logo;
         channel.getElementsByClassName('streamer-name')[0].innerHTML = data[i].display_name;
-
-        // check if image is 403
-        // const checkImage = new XMLHttpRequest();
-        // checkImage.open('HEAD', data[i].logo, false);
-        // checkImage.send();
-        // if (checkImage.status == 404 || checkImage.status == 403) {
-        //   channel.getElementsByClassName('streamer-img')[0].src = 'img/missing.png';
-        // }
 
         for (let j = 0; j < checkForMissing.length; j += 1) {
           if (checkForMissing[j] === channels[k]) {
