@@ -64,12 +64,12 @@ const updateStreamerInfo = function (data) {
         channel.getElementsByClassName('streamer-name')[0].innerHTML = data[i].display_name;
 
         // check if image is 403
-        const checkImage = new XMLHttpRequest();
-        checkImage.open('HEAD', data[i].logo, false);
-        checkImage.send();
-        if (checkImage.status == 404 || checkImage.status == 403) {
-          channel.getElementsByClassName('streamer-img')[0].src = 'img/missing.png';
-        }
+        // const checkImage = new XMLHttpRequest();
+        // checkImage.open('HEAD', data[i].logo, false);
+        // checkImage.send();
+        // if (checkImage.status == 404 || checkImage.status == 403) {
+        //   channel.getElementsByClassName('streamer-img')[0].src = 'img/missing.png';
+        // }
 
         for (let j = 0; j < checkForMissing.length; j += 1) {
           if (checkForMissing[j] === channels[k]) {
